@@ -66,10 +66,10 @@ namespace GroceryCalc
         }
 
         public void DisplayReceipt() {
-            Console.WriteLine("Receipt");
-            Console.WriteLine("-------");
+            Console.WriteLine("\t   Receipt");
+            Console.WriteLine("-----------------------------");
             Console.WriteLine("Total Price Before Discount: $" + totalPriceBeforeDiscount);
-            Console.WriteLine("Discount: " + discount + "%");
+            Console.WriteLine("Discount: $" + discount);
             Console.WriteLine("Total Price: $" + totalPrice);
         }
 
