@@ -130,6 +130,7 @@
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(productLabel);
+            panel2.ForeColor = Color.White;
             panel2.Location = new Point(406, 122);
             panel2.Name = "panel2";
             panel2.Size = new Size(948, 518);
@@ -137,15 +138,17 @@
             // 
             // productTable
             // 
-            productTable.ColumnCount = 3;
-            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 51.1976051F));
-            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 48.8023949F));
-            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 104F));
-            productTable.Location = new Point(51, 85);
+            productTable.ColumnCount = 4;
+            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 52.61324F));
+            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 47.38676F));
+            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 98F));
+            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 34F));
+            productTable.ForeColor = Color.Black;
+            productTable.Location = new Point(42, 84);
             productTable.Name = "productTable";
             productTable.RowCount = 1;
             productTable.RowStyles.Add(new RowStyle(SizeType.Percent, 49.0566025F));
-            productTable.Size = new Size(439, 34);
+            productTable.Size = new Size(448, 34);
             productTable.TabIndex = 5;
             productTable.Paint += productTable_Paint;
             // 

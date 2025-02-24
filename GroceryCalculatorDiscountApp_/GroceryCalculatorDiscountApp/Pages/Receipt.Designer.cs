@@ -102,6 +102,7 @@
             subTotal.Size = new Size(55, 21);
             subTotal.TabIndex = 2;
             subTotal.Text = "$0.00";
+            this.Controls.Add(this.subTotal);
             // 
             // discountAmount
             // 
@@ -217,7 +218,7 @@
             label7.Name = "label7";
             label7.Size = new Size(543, 39);
             label7.TabIndex = 2;
-            label7.Text = "Thanks for buying at Haggai's Store";
+            label7.Text = "Thanks for buying at Ducay's Store";
             // 
             // panel2
             // 

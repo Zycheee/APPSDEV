@@ -8,23 +8,23 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\chris\\.nuget\\packages\\": {},
-    "H:\\Visual Plugin\\NuGetPackages": {}
+    "C:\\Users\\Angelo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\chris\\Documents\\C#\\GroceryCalculatorDiscountApp_\\GroceryCalculatorDiscountApp\\GroceryCalculatorDiscountApp.csproj",
+      "projectUniqueName": "C:\\Users\\Angelo\\Downloads\\APPSDEV-main\\GroceryCalculatorDiscountApp_\\GroceryCalculatorDiscountApp\\GroceryCalculatorDiscountApp.csproj",
       "projectName": "GroceryCalculatorDiscountApp",
-      "projectPath": "C:\\Users\\chris\\Documents\\C#\\GroceryCalculatorDiscountApp_\\GroceryCalculatorDiscountApp\\GroceryCalculatorDiscountApp.csproj",
-      "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\chris\\Documents\\C#\\GroceryCalculatorDiscountApp_\\GroceryCalculatorDiscountApp\\obj\\",
+      "projectPath": "C:\\Users\\Angelo\\Downloads\\APPSDEV-main\\GroceryCalculatorDiscountApp_\\GroceryCalculatorDiscountApp\\GroceryCalculatorDiscountApp.csproj",
+      "packagesPath": "C:\\Users\\Angelo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Angelo\\Downloads\\APPSDEV-main\\GroceryCalculatorDiscountApp_\\GroceryCalculatorDiscountApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "H:\\Visual Plugin\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Angelo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
