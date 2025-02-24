@@ -26,11 +26,11 @@ namespace GroceryCalculatorDiscountApp.Pages
             panel1.BackColor = Color.FromArgb(85, 255, 255, 255);
 
             //Adding image for each product that is in stock
-            appleImage.Image = Image.FromFile(@"C:\Users\chris\Documents\C#\GroceryCalculatorDiscountApp_\GroceryCalculatorDiscountApp\Images\Apple.jpg");
-            bananaImage.Image = Image.FromFile(@"C:\Users\chris\Documents\C#\GroceryCalculatorDiscountApp_\GroceryCalculatorDiscountApp\Images\Banana.jpg");
-            orangeImage.Image = Image.FromFile(@"C:\Users\chris\Documents\C#\GroceryCalculatorDiscountApp_\GroceryCalculatorDiscountApp\Images\Orange.jpg");
-            milkImage.Image = Image.FromFile(@"C:\Users\chris\Documents\C#\GroceryCalculatorDiscountApp_\GroceryCalculatorDiscountApp\Images\Milk.jpg");
-            breadImage.Image = Image.FromFile(@"C:\Users\chris\Documents\C#\GroceryCalculatorDiscountApp_\GroceryCalculatorDiscountApp\Images\Bread.jpg");
+            appleImage.Image = Image.FromFile(@"C:\Users\Angelo\Downloads\APPSDEV-main\GroceryCalculatorDiscountApp_\GroceryCalculatorDiscountApp\Images\Apple.jpg");
+            bananaImage.Image = Image.FromFile(@"C:\Users\Angelo\Downloads\APPSDEV-main\GroceryCalculatorDiscountApp_\GroceryCalculatorDiscountApp\Images\Banana.jpg");
+            orangeImage.Image = Image.FromFile(@"C:\Users\Angelo\Downloads\APPSDEV-main\GroceryCalculatorDiscountApp_\GroceryCalculatorDiscountApp\Images\Orange.jpg");
+            milkImage.Image = Image.FromFile(@"C:\Users\Angelo\Downloads\APPSDEV-main\GroceryCalculatorDiscountApp_\GroceryCalculatorDiscountApp\Images\Milk.jpg");
+            breadImage.Image = Image.FromFile(@"C:\Users\Angelo\Downloads\APPSDEV-main\GroceryCalculatorDiscountApp_\GroceryCalculatorDiscountApp\Images\Bread.jpg");
 
             //Adjust the Size, Layout, Aspect Ratio of each product images
             appleImage.Size = new Size(228, 162);

@@ -34,7 +34,6 @@ namespace GroceryCalculatorDiscountApp.Pages
             foreach (var item in productData.ShoppingCart.Items)
             {
 
-                
                 Label nameLabel = new Label
                 {
                     Text = item.Name,
@@ -66,8 +65,6 @@ namespace GroceryCalculatorDiscountApp.Pages
                 productTable.Controls.Add(quantityBox, 2, rowIndex);
             }
         }
-        
-
         private void newPurchaseButton_Click(object sender, EventArgs e)
         {
             CalculateMenu calc = new CalculateMenu();
@@ -76,6 +73,7 @@ namespace GroceryCalculatorDiscountApp.Pages
             Menu.MainPanel.Controls.Clear();
             Menu.MainPanel.Controls.Add(calc);
             calc.Show();
+            productData.ShoppingCart.Items.Clear();
         }
 
         private void exitApp_Click(object sender, EventArgs e)
