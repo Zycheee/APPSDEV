@@ -240,6 +240,7 @@
             subTotal.Size = new Size(55, 21);
             subTotal.TabIndex = 2;
             subTotal.Text = "$0.00";
+            subTotal.Click += subTotal_Click;
             // 
             // label4
             // 
@@ -301,7 +302,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(44, 50, 58);
-            ClientSize = new Size(1424, 681);
+            ClientSize = new Size(1386, 681);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(label7);

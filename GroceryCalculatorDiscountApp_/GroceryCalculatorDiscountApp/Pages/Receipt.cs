@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GroceryCalculatorDiscountApp.Pages
@@ -33,7 +27,6 @@ namespace GroceryCalculatorDiscountApp.Pages
             // Loop through the product list and add them to the table
             foreach (var item in productData.ShoppingCart.Items)
             {
-
                 Label nameLabel = new Label
                 {
                     Text = item.Name,
@@ -45,7 +38,7 @@ namespace GroceryCalculatorDiscountApp.Pages
 
                 Label priceLabel = new Label
                 {
-                    Text = "$" + item.Price.ToString(),
+                    Text = "$" + item.Price.ToString("0.00"),
                     AutoSize = true,
                     Font = new Font("Arial", 14.25F, FontStyle.Regular)
                 };
@@ -64,7 +57,43 @@ namespace GroceryCalculatorDiscountApp.Pages
                 productTable.Controls.Add(priceLabel, 1, rowIndex);
                 productTable.Controls.Add(quantityBox, 2, rowIndex);
             }
+
+            // Calculate and display subtotal, discount amount, and total payment
+            DisplayCalculations();
         }
+
+        private void DisplayCalculations()
+        {
+            // Calculate subtotal (total cost before discount)
+            decimal subtotal = productData.ShoppingCart.Items.Sum(item => item.Price * item.PurchasedQuantity);
+
+            // Calculate discount based on subtotal
+            decimal discountPercentage = 0;
+            if (subtotal >= 500)
+            {
+                discountPercentage = 0.20m; // 20%
+            }
+            else if (subtotal >= 200)
+            {
+                discountPercentage = 0.15m; // 15%
+            }
+            else if (subtotal >= 100)
+            {
+                discountPercentage = 0.10m; // 10%
+            }
+
+            // Calculate discount amount
+            decimal discountAmountValue = subtotal * discountPercentage;
+
+            // Calculate total payment (final amount after discount)
+            decimal totalPayment = subtotal - discountAmountValue;
+
+            // Display results in labels
+            sub_Total.Text = $"${subtotal.ToString("0.00")}";
+            discountAmount.Text = $"${discountAmountValue.ToString("0.00")} ({discountPercentage * 100}%)";
+            totalAmount.Text = $"${totalPayment.ToString("0.00")}";
+        }
+
         private void newPurchaseButton_Click(object sender, EventArgs e)
         {
             CalculateMenu calc = new CalculateMenu();
@@ -81,8 +110,25 @@ namespace GroceryCalculatorDiscountApp.Pages
             Application.Exit();
         }
 
-        private void productQuantity_TextChanged(object sender, EventArgs e)
+        
+        private void discountAmount_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void totalAmount_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void sub_Total_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
