@@ -29,22 +29,21 @@
         private void InitializeComponent()
         {
             productLabel = new Label();
+            label7 = new Label();
+            label1 = new Label();
             label2 = new Label();
+            panel3 = new Panel();
             label3 = new Label();
             label4 = new Label();
-            subTotal = new Label();
             discountAmount = new Label();
             totalAmount = new Label();
-            panel3 = new Panel();
-            sub_Total = new Label();
-            label6 = new Label();
             label5 = new Label();
-            exitApp = new Button();
+            label6 = new Label();
+            sub_Total = new Label();
             newPurchaseButton = new Button();
-            label1 = new Label();
-            label7 = new Label();
-            panel2 = new Panel();
+            exitApp = new Button();
             productTable = new TableLayoutPanel();
+            panel2 = new Panel();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -60,6 +59,29 @@
             productLabel.TabIndex = 2;
             productLabel.Text = "Product";
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Arial", 25F);
+            label7.ForeColor = Color.FromArgb(44, 50, 58);
+            label7.Location = new Point(219, 30);
+            label7.Name = "label7";
+            label7.Size = new Size(586, 39);
+            label7.TabIndex = 2;
+            label7.Text = "Thanks for buying at Haggaigai's Store\r\n";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 22F);
+            label1.ForeColor = Color.FromArgb(44, 50, 58);
+            label1.Location = new Point(279, 107);
+            label1.Name = "label1";
+            label1.Size = new Size(83, 35);
+            label1.TabIndex = 2;
+            label1.Text = "Price";
+            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -70,6 +92,22 @@
             label2.Size = new Size(126, 35);
             label2.TabIndex = 2;
             label2.Text = "Quantity";
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.White;
+            panel3.Controls.Add(sub_Total);
+            panel3.Controls.Add(label6);
+            panel3.Controls.Add(label5);
+            panel3.Controls.Add(totalAmount);
+            panel3.Controls.Add(discountAmount);
+            panel3.Controls.Add(label4);
+            panel3.Controls.Add(label3);
+            panel3.Location = new Point(586, 116);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(347, 308);
+            panel3.TabIndex = 3;
+            panel3.Paint += panel3_Paint;
             // 
             // label3
             // 
@@ -92,17 +130,6 @@
             label4.Size = new Size(81, 19);
             label4.TabIndex = 2;
             label4.Text = "Subtotal:";
-            // 
-            // subTotal
-            // 
-            subTotal.AutoSize = true;
-            subTotal.Font = new Font("Arial", 13F);
-            subTotal.ForeColor = Color.FromArgb(44, 50, 58);
-            subTotal.Location = new Point(196, 68);
-            subTotal.Name = "subTotal";
-            subTotal.Size = new Size(55, 21);
-            subTotal.TabIndex = 2;
-            subTotal.Text = "$0.00";
             // 
             // discountAmount
             // 
@@ -128,33 +155,17 @@
             totalAmount.Text = "$0.00";
             totalAmount.Click += totalAmount_Click;
             // 
-            // panel3
+            // label5
             // 
-            panel3.BackColor = Color.White;
-            panel3.Controls.Add(sub_Total);
-            panel3.Controls.Add(label6);
-            panel3.Controls.Add(label5);
-            panel3.Controls.Add(totalAmount);
-            panel3.Controls.Add(discountAmount);
-            panel3.Controls.Add(label4);
-            panel3.Controls.Add(label3);
-            panel3.Location = new Point(586, 116);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(347, 308);
-            panel3.TabIndex = 3;
-            panel3.Paint += panel3_Paint;
-            // 
-            // sub_Total
-            // 
-            sub_Total.AutoSize = true;
-            sub_Total.Font = new Font("Arial", 13F);
-            sub_Total.ForeColor = Color.FromArgb(44, 50, 58);
-            sub_Total.Location = new Point(196, 56);
-            sub_Total.Name = "sub_Total";
-            sub_Total.Size = new Size(55, 21);
-            sub_Total.TabIndex = 3;
-            sub_Total.Text = "$0.00";
-            sub_Total.Click += sub_Total_Click;
+            label5.AutoSize = true;
+            label5.FlatStyle = FlatStyle.System;
+            label5.Font = new Font("Arial", 12.75F, FontStyle.Bold);
+            label5.ForeColor = Color.FromArgb(44, 50, 58);
+            label5.Location = new Point(23, 131);
+            label5.Name = "label5";
+            label5.Size = new Size(149, 19);
+            label5.TabIndex = 2;
+            label5.Text = "Discount amount:";
             // 
             // label6
             // 
@@ -168,33 +179,17 @@
             label6.TabIndex = 2;
             label6.Text = "Total Payment: ";
             // 
-            // label5
+            // sub_Total
             // 
-            label5.AutoSize = true;
-            label5.FlatStyle = FlatStyle.System;
-            label5.Font = new Font("Arial", 12.75F, FontStyle.Bold);
-            label5.ForeColor = Color.FromArgb(44, 50, 58);
-            label5.Location = new Point(23, 131);
-            label5.Name = "label5";
-            label5.Size = new Size(149, 19);
-            label5.TabIndex = 2;
-            label5.Text = "Discount amount:";
-            // 
-            // exitApp
-            // 
-            exitApp.BackColor = Color.Gray;
-            exitApp.Cursor = Cursors.Hand;
-            exitApp.FlatStyle = FlatStyle.Flat;
-            exitApp.Font = new Font("Arial", 15F);
-            exitApp.ForeColor = Color.White;
-            exitApp.Location = new Point(501, 439);
-            exitApp.Name = "exitApp";
-            exitApp.Size = new Size(243, 56);
-            exitApp.TabIndex = 5;
-            exitApp.TabStop = false;
-            exitApp.Text = "Exit app";
-            exitApp.UseVisualStyleBackColor = false;
-            exitApp.Click += exitApp_Click;
+            sub_Total.AutoSize = true;
+            sub_Total.Font = new Font("Arial", 13F);
+            sub_Total.ForeColor = Color.FromArgb(44, 50, 58);
+            sub_Total.Location = new Point(196, 56);
+            sub_Total.Name = "sub_Total";
+            sub_Total.Size = new Size(55, 21);
+            sub_Total.TabIndex = 3;
+            sub_Total.Text = "$0.00";
+            sub_Total.Click += sub_Total_Click;
             // 
             // newPurchaseButton
             // 
@@ -212,44 +207,21 @@
             newPurchaseButton.UseVisualStyleBackColor = false;
             newPurchaseButton.Click += newPurchaseButton_Click;
             // 
-            // label1
+            // exitApp
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 22F);
-            label1.ForeColor = Color.FromArgb(44, 50, 58);
-            label1.Location = new Point(279, 107);
-            label1.Name = "label1";
-            label1.Size = new Size(83, 35);
-            label1.TabIndex = 2;
-            label1.Text = "Price";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.BackColor = Color.Transparent;
-            label7.Font = new Font("Arial", 25F);
-            label7.ForeColor = Color.FromArgb(44, 50, 58);
-            label7.Location = new Point(219, 30);
-            label7.Name = "label7";
-            label7.Size = new Size(535, 39);
-            label7.TabIndex = 2;
-            label7.Text = "Thanks for buying at Ducay's Store";
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(224, 224, 224);
-            panel2.Controls.Add(productTable);
-            panel2.Controls.Add(exitApp);
-            panel2.Controls.Add(newPurchaseButton);
-            panel2.Controls.Add(panel3);
-            panel2.Controls.Add(label2);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(label7);
-            panel2.Controls.Add(productLabel);
-            panel2.Location = new Point(238, 81);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(948, 518);
-            panel2.TabIndex = 4;
+            exitApp.BackColor = Color.Gray;
+            exitApp.Cursor = Cursors.Hand;
+            exitApp.FlatStyle = FlatStyle.Flat;
+            exitApp.Font = new Font("Arial", 15F);
+            exitApp.ForeColor = Color.White;
+            exitApp.Location = new Point(501, 439);
+            exitApp.Name = "exitApp";
+            exitApp.Size = new Size(243, 56);
+            exitApp.TabIndex = 5;
+            exitApp.TabStop = false;
+            exitApp.Text = "Exit app";
+            exitApp.UseVisualStyleBackColor = false;
+            exitApp.Click += exitApp_Click;
             // 
             // productTable
             // 
@@ -264,13 +236,28 @@
             productTable.Size = new Size(495, 34);
             productTable.TabIndex = 6;
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(224, 224, 224);
+            panel2.Controls.Add(productTable);
+            panel2.Controls.Add(exitApp);
+            panel2.Controls.Add(newPurchaseButton);
+            panel2.Controls.Add(panel3);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(label7);
+            panel2.Controls.Add(productLabel);
+            panel2.Location = new Point(238, 80);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(948, 518);
+            panel2.TabIndex = 4;
+            // 
             // Receipt
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(44, 50, 58);
             ClientSize = new Size(1386, 681);
-            Controls.Add(subTotal);
             Controls.Add(panel2);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Receipt";
@@ -280,26 +267,25 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
+
         private Label productLabel;
+        private Label label7;
+        private Label label1;
         private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label subTotal;
-        private Label discountAmount;
-        private Label totalAmount;
         private Panel panel3;
+        private Label sub_Total;
         private Label label6;
         private Label label5;
-        private Button exitApp;
+        private Label totalAmount;
+        private Label discountAmount;
+        private Label label4;
+        private Label label3;
         private Button newPurchaseButton;
-        private Label label1;
-        private Label label7;
-        private Panel panel2;
+        private Button exitApp;
         private TableLayoutPanel productTable;
-        private Label sub_Total;
+        private Panel panel2;
     }
 }

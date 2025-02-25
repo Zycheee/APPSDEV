@@ -139,16 +139,16 @@
             // productTable
             // 
             productTable.ColumnCount = 4;
-            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 52.61324F));
-            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 47.38676F));
-            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 98F));
-            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 34F));
+            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 55.8823547F));
+            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 44.1176453F));
+            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 81F));
+            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 26F));
             productTable.ForeColor = Color.Black;
             productTable.Location = new Point(42, 84);
             productTable.Name = "productTable";
             productTable.RowCount = 1;
             productTable.RowStyles.Add(new RowStyle(SizeType.Percent, 49.0566025F));
-            productTable.Size = new Size(448, 34);
+            productTable.Size = new Size(448, 44);
             productTable.TabIndex = 5;
             productTable.Paint += productTable_Paint;
             // 

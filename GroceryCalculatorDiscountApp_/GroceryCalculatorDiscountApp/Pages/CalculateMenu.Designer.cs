@@ -34,31 +34,30 @@
             productButton = new Button();
             label2 = new Label();
             applePanel = new Panel();
-            appleQuantity = new Button();
             addApple = new Button();
             appleImage = new PictureBox();
             applePrice = new Label();
             label3 = new Label();
+            productAdded = new Panel();
+            productOK = new Button();
+            label12 = new Label();
+            label1 = new Label();
             bananaPanel = new Panel();
-            bananaQuantity = new Button();
             bananaAdd = new Button();
             bananaImage = new PictureBox();
             label8 = new Label();
             label4 = new Label();
             orangePanel = new Panel();
-            orangeQuantity = new Button();
             orangeAdd = new Button();
             orangeImage = new PictureBox();
             label9 = new Label();
             label5 = new Label();
             milkPanel = new Panel();
-            milkQuantity = new Button();
             milkAdd = new Button();
             milkImage = new PictureBox();
             label10 = new Label();
             label6 = new Label();
             breadPanel = new Panel();
-            breadQuantity = new Button();
             addBread = new Button();
             breadImage = new PictureBox();
             label11 = new Label();
@@ -66,6 +65,7 @@
             panel1.SuspendLayout();
             applePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)appleImage).BeginInit();
+            productAdded.SuspendLayout();
             bananaPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bananaImage).BeginInit();
             orangePanel.SuspendLayout();
@@ -134,6 +134,7 @@
             productButton.TabStop = false;
             productButton.Text = "Products";
             productButton.UseVisualStyleBackColor = false;
+            productButton.Click += productButton_Click;
             // 
             // label2
             // 
@@ -149,7 +150,6 @@
             // applePanel
             // 
             applePanel.BackColor = Color.FromArgb(224, 224, 224);
-            applePanel.Controls.Add(appleQuantity);
             applePanel.Controls.Add(addApple);
             applePanel.Controls.Add(appleImage);
             applePanel.Controls.Add(applePrice);
@@ -159,20 +159,6 @@
             applePanel.Size = new Size(249, 258);
             applePanel.TabIndex = 7;
             // 
-            // appleQuantity
-            // 
-            appleQuantity.BackColor = Color.FromArgb(44, 50, 58);
-            appleQuantity.FlatStyle = FlatStyle.Flat;
-            appleQuantity.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            appleQuantity.ForeColor = Color.White;
-            appleQuantity.Location = new Point(31, 214);
-            appleQuantity.Name = "appleQuantity";
-            appleQuantity.Size = new Size(34, 34);
-            appleQuantity.TabIndex = 0;
-            appleQuantity.TabStop = false;
-            appleQuantity.UseVisualStyleBackColor = false;
-            appleQuantity.Click += appleQuantity_Click;
-            // 
             // addApple
             // 
             addApple.BackColor = Color.FromArgb(44, 50, 58);
@@ -180,9 +166,9 @@
             addApple.FlatStyle = FlatStyle.Flat;
             addApple.Font = new Font("Arial", 15F);
             addApple.ForeColor = Color.White;
-            addApple.Location = new Point(116, 214);
+            addApple.Location = new Point(16, 215);
             addApple.Name = "addApple";
-            addApple.Size = new Size(107, 37);
+            addApple.Size = new Size(207, 37);
             addApple.TabIndex = 3;
             addApple.TabStop = false;
             addApple.Text = "Add";
@@ -205,7 +191,7 @@
             applePrice.BackColor = Color.Transparent;
             applePrice.Font = new Font("Arial", 16F);
             applePrice.ForeColor = Color.FromArgb(44, 50, 58);
-            applePrice.Location = new Point(138, 185);
+            applePrice.Location = new Point(157, 187);
             applePrice.Name = "applePrice";
             applePrice.Size = new Size(66, 25);
             applePrice.TabIndex = 2;
@@ -225,10 +211,58 @@
             label3.Text = "Apple";
             label3.Click += label3_Click;
             // 
+            // productAdded
+            // 
+            productAdded.Controls.Add(productOK);
+            productAdded.Controls.Add(label12);
+            productAdded.Controls.Add(label1);
+            productAdded.Location = new Point(1054, 402);
+            productAdded.Name = "productAdded";
+            productAdded.Size = new Size(427, 241);
+            productAdded.TabIndex = 9;
+            // 
+            // productOK
+            // 
+            productOK.BackColor = Color.White;
+            productOK.Cursor = Cursors.Hand;
+            productOK.FlatStyle = FlatStyle.Flat;
+            productOK.Font = new Font("Arial", 15F);
+            productOK.ForeColor = Color.Black;
+            productOK.Location = new Point(137, 185);
+            productOK.Name = "productOK";
+            productOK.Size = new Size(140, 45);
+            productOK.TabIndex = 1;
+            productOK.Text = "OK";
+            productOK.UseVisualStyleBackColor = false;
+            productOK.Click += productOK_Click;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.BackColor = Color.Transparent;
+            label12.Font = new Font("Arial", 72F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label12.ForeColor = Color.FromArgb(0, 192, 0);
+            label12.Location = new Point(168, 0);
+            label12.Name = "label12";
+            label12.Size = new Size(102, 107);
+            label12.TabIndex = 0;
+            label12.Text = "✓";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Arial", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(31, 118);
+            label1.Name = "label1";
+            label1.Size = new Size(378, 64);
+            label1.TabIndex = 0;
+            label1.Text = "The product has been added  \r\n              to the cart";
+            // 
             // bananaPanel
             // 
             bananaPanel.BackColor = Color.FromArgb(224, 224, 224);
-            bananaPanel.Controls.Add(bananaQuantity);
             bananaPanel.Controls.Add(bananaAdd);
             bananaPanel.Controls.Add(bananaImage);
             bananaPanel.Controls.Add(label8);
@@ -238,20 +272,6 @@
             bananaPanel.Size = new Size(249, 261);
             bananaPanel.TabIndex = 8;
             // 
-            // bananaQuantity
-            // 
-            bananaQuantity.BackColor = Color.FromArgb(44, 50, 58);
-            bananaQuantity.FlatStyle = FlatStyle.Flat;
-            bananaQuantity.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            bananaQuantity.ForeColor = Color.White;
-            bananaQuantity.Location = new Point(42, 219);
-            bananaQuantity.Name = "bananaQuantity";
-            bananaQuantity.Size = new Size(34, 34);
-            bananaQuantity.TabIndex = 0;
-            bananaQuantity.TabStop = false;
-            bananaQuantity.UseVisualStyleBackColor = false;
-            bananaQuantity.Click += appleQuantity_Click;
-            // 
             // bananaAdd
             // 
             bananaAdd.BackColor = Color.FromArgb(44, 50, 58);
@@ -259,9 +279,9 @@
             bananaAdd.FlatStyle = FlatStyle.Flat;
             bananaAdd.Font = new Font("Arial", 15F);
             bananaAdd.ForeColor = Color.White;
-            bananaAdd.Location = new Point(116, 217);
+            bananaAdd.Location = new Point(24, 217);
             bananaAdd.Name = "bananaAdd";
-            bananaAdd.Size = new Size(107, 37);
+            bananaAdd.Size = new Size(199, 37);
             bananaAdd.TabIndex = 3;
             bananaAdd.TabStop = false;
             bananaAdd.Text = "Add";
@@ -305,7 +325,6 @@
             // orangePanel
             // 
             orangePanel.BackColor = Color.FromArgb(224, 224, 224);
-            orangePanel.Controls.Add(orangeQuantity);
             orangePanel.Controls.Add(orangeAdd);
             orangePanel.Controls.Add(orangeImage);
             orangePanel.Controls.Add(label9);
@@ -315,20 +334,6 @@
             orangePanel.Size = new Size(249, 261);
             orangePanel.TabIndex = 8;
             // 
-            // orangeQuantity
-            // 
-            orangeQuantity.BackColor = Color.FromArgb(44, 50, 58);
-            orangeQuantity.FlatStyle = FlatStyle.Flat;
-            orangeQuantity.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            orangeQuantity.ForeColor = Color.White;
-            orangeQuantity.Location = new Point(42, 219);
-            orangeQuantity.Name = "orangeQuantity";
-            orangeQuantity.Size = new Size(34, 34);
-            orangeQuantity.TabIndex = 0;
-            orangeQuantity.TabStop = false;
-            orangeQuantity.UseVisualStyleBackColor = false;
-            orangeQuantity.Click += appleQuantity_Click;
-            // 
             // orangeAdd
             // 
             orangeAdd.BackColor = Color.FromArgb(44, 50, 58);
@@ -336,9 +341,9 @@
             orangeAdd.FlatStyle = FlatStyle.Flat;
             orangeAdd.Font = new Font("Arial", 15F);
             orangeAdd.ForeColor = Color.White;
-            orangeAdd.Location = new Point(116, 219);
+            orangeAdd.Location = new Point(18, 219);
             orangeAdd.Name = "orangeAdd";
-            orangeAdd.Size = new Size(107, 37);
+            orangeAdd.Size = new Size(205, 37);
             orangeAdd.TabIndex = 3;
             orangeAdd.TabStop = false;
             orangeAdd.Text = "Add";
@@ -382,7 +387,6 @@
             // milkPanel
             // 
             milkPanel.BackColor = Color.FromArgb(224, 224, 224);
-            milkPanel.Controls.Add(milkQuantity);
             milkPanel.Controls.Add(milkAdd);
             milkPanel.Controls.Add(milkImage);
             milkPanel.Controls.Add(label10);
@@ -392,20 +396,6 @@
             milkPanel.Size = new Size(249, 258);
             milkPanel.TabIndex = 7;
             // 
-            // milkQuantity
-            // 
-            milkQuantity.BackColor = Color.FromArgb(44, 50, 58);
-            milkQuantity.FlatStyle = FlatStyle.Flat;
-            milkQuantity.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            milkQuantity.ForeColor = Color.White;
-            milkQuantity.Location = new Point(31, 218);
-            milkQuantity.Name = "milkQuantity";
-            milkQuantity.Size = new Size(34, 34);
-            milkQuantity.TabIndex = 0;
-            milkQuantity.TabStop = false;
-            milkQuantity.UseVisualStyleBackColor = false;
-            milkQuantity.Click += appleQuantity_Click;
-            // 
             // milkAdd
             // 
             milkAdd.BackColor = Color.FromArgb(44, 50, 58);
@@ -413,9 +403,9 @@
             milkAdd.FlatStyle = FlatStyle.Flat;
             milkAdd.Font = new Font("Arial", 15F);
             milkAdd.ForeColor = Color.White;
-            milkAdd.Location = new Point(116, 214);
+            milkAdd.Location = new Point(24, 214);
             milkAdd.Name = "milkAdd";
-            milkAdd.Size = new Size(107, 37);
+            milkAdd.Size = new Size(199, 37);
             milkAdd.TabIndex = 3;
             milkAdd.TabStop = false;
             milkAdd.Text = "Add";
@@ -461,7 +451,6 @@
             // breadPanel
             // 
             breadPanel.BackColor = Color.FromArgb(224, 224, 224);
-            breadPanel.Controls.Add(breadQuantity);
             breadPanel.Controls.Add(addBread);
             breadPanel.Controls.Add(breadImage);
             breadPanel.Controls.Add(label11);
@@ -471,20 +460,6 @@
             breadPanel.Size = new Size(249, 258);
             breadPanel.TabIndex = 7;
             // 
-            // breadQuantity
-            // 
-            breadQuantity.BackColor = Color.FromArgb(44, 50, 58);
-            breadQuantity.FlatStyle = FlatStyle.Flat;
-            breadQuantity.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            breadQuantity.ForeColor = Color.White;
-            breadQuantity.Location = new Point(42, 213);
-            breadQuantity.Name = "breadQuantity";
-            breadQuantity.Size = new Size(34, 34);
-            breadQuantity.TabIndex = 0;
-            breadQuantity.TabStop = false;
-            breadQuantity.UseVisualStyleBackColor = false;
-            breadQuantity.Click += appleQuantity_Click;
-            // 
             // addBread
             // 
             addBread.BackColor = Color.FromArgb(44, 50, 58);
@@ -492,9 +467,9 @@
             addBread.FlatStyle = FlatStyle.Flat;
             addBread.Font = new Font("Arial", 15F);
             addBread.ForeColor = Color.White;
-            addBread.Location = new Point(116, 214);
+            addBread.Location = new Point(24, 215);
             addBread.Name = "addBread";
-            addBread.Size = new Size(107, 37);
+            addBread.Size = new Size(199, 37);
             addBread.TabIndex = 3;
             addBread.TabStop = false;
             addBread.Text = "Add";
@@ -543,6 +518,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(44, 50, 58);
             ClientSize = new Size(1424, 681);
+            Controls.Add(productAdded);
             Controls.Add(orangePanel);
             Controls.Add(bananaPanel);
             Controls.Add(breadPanel);
@@ -558,6 +534,8 @@
             applePanel.ResumeLayout(false);
             applePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)appleImage).EndInit();
+            productAdded.ResumeLayout(false);
+            productAdded.PerformLayout();
             bananaPanel.ResumeLayout(false);
             bananaPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)bananaImage).EndInit();
@@ -582,24 +560,19 @@
         private PictureBox appleImage;
         private Label label3;
         private Button addApple;
-        private Button appleQuantity;
         private Panel bananaPanel;
         private PictureBox bananaImage;
         private Label label4;
-        private Button bananaQuantity;
         private Button bananaAdd;
         private Panel orangePanel;
-        private Button orangeQuantity;
         private Button orangeAdd;
         private PictureBox orangeImage;
         private Label label5;
         private Panel milkPanel;
-        private Button milkQuantity;
         private Button milkAdd;
         private PictureBox milkImage;
         private Label label6;
         private Panel breadPanel;
-        private Button breadQuantity;
         private Button addBread;
         private PictureBox breadImage;
         private Label label7;
@@ -611,5 +584,9 @@
         private Button checkoutButton;
         private Button productButton;
         private Button exitButton;
+        private Label label1;
+        private Label label12;
+        private Panel productAdded;
+        private Button productOK;
     }
 }

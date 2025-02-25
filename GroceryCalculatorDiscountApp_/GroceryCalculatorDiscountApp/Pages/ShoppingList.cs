@@ -26,7 +26,7 @@ namespace GroceryCalculatorDiscountApp.Pages
             productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 150)); // Product Name
             productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 100)); // Price
             productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 50));  // Quantity
-            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 60));  //X button
+            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 40));  //X button
             productTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
             productTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
             productTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
@@ -41,7 +41,7 @@ namespace GroceryCalculatorDiscountApp.Pages
         private void RefreshProductTable()
         {
             productTable.Controls.Clear(); // Clear all existing UI components
-            productTable.RowCount = 0;     // Reset row count
+            productTable.RowCount = 1;     // Reset row count
 
             // Re-add products after removing one
             foreach (var item in productData.ShoppingCart.Items)
@@ -73,11 +73,10 @@ namespace GroceryCalculatorDiscountApp.Pages
                 {
                     Text = "X",
                     Width = 30,
-                    Height = 30,
+                    Height = 25,
                     ForeColor = Color.White,
                     BackColor = Color.Red,
                     FlatStyle = FlatStyle.Flat,
-                    Margin = new Padding(3, 3, 3, 3)
                 };
 
                 removeButton.FlatAppearance.BorderSize = 0;

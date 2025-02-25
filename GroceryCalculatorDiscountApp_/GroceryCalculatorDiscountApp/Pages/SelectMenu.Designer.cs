@@ -28,20 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             titleText = new Label();
             button1 = new Button();
             exitButton = new Button();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
             // 
             // titleText
             // 
@@ -100,7 +90,6 @@
             Controls.Add(exitButton);
             Controls.Add(button1);
             Controls.Add(titleText);
-            Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "SelectMenu";
             Text = "SelectMenu";
@@ -109,8 +98,6 @@
         }
 
         #endregion
-
-        private Label label1;
         private Label titleText;
         private Button button1;
         private Button exitButton;

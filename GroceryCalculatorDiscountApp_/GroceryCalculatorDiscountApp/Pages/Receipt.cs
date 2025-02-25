@@ -96,7 +96,7 @@ namespace GroceryCalculatorDiscountApp.Pages
 
         private void newPurchaseButton_Click(object sender, EventArgs e)
         {
-            CalculateMenu calc = new CalculateMenu();
+            SelectMenu calc = new SelectMenu();
             calc.Dock = DockStyle.Fill;
             calc.TopLevel = false;
             Menu.MainPanel.Controls.Clear();

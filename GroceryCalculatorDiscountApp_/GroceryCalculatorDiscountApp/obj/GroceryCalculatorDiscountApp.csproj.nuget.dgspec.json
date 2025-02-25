@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\Desktop\\AppsDev_\\GroceryCalculatorDiscountApp_\\GroceryCalculatorDiscountApp\\GroceryCalculatorDiscountApp.csproj": {}
+    "Z:\\XX515\\GroceryCalculatorDiscountApp_\\GroceryCalculatorDiscountApp\\GroceryCalculatorDiscountApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\Desktop\\AppsDev_\\GroceryCalculatorDiscountApp_\\GroceryCalculatorDiscountApp\\GroceryCalculatorDiscountApp.csproj": {
+    "Z:\\XX515\\GroceryCalculatorDiscountApp_\\GroceryCalculatorDiscountApp\\GroceryCalculatorDiscountApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\AppsDev_\\GroceryCalculatorDiscountApp_\\GroceryCalculatorDiscountApp\\GroceryCalculatorDiscountApp.csproj",
+        "projectUniqueName": "Z:\\XX515\\GroceryCalculatorDiscountApp_\\GroceryCalculatorDiscountApp\\GroceryCalculatorDiscountApp.csproj",
         "projectName": "GroceryCalculatorDiscountApp",
-        "projectPath": "C:\\Users\\ADMIN\\Desktop\\AppsDev_\\GroceryCalculatorDiscountApp_\\GroceryCalculatorDiscountApp\\GroceryCalculatorDiscountApp.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Desktop\\AppsDev_\\GroceryCalculatorDiscountApp_\\GroceryCalculatorDiscountApp\\obj\\",
+        "projectPath": "Z:\\XX515\\GroceryCalculatorDiscountApp_\\GroceryCalculatorDiscountApp\\GroceryCalculatorDiscountApp.csproj",
+        "packagesPath": "C:\\Users\\XX515\\.nuget\\packages\\",
+        "outputPath": "Z:\\XX515\\GroceryCalculatorDiscountApp_\\GroceryCalculatorDiscountApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\XX515\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
