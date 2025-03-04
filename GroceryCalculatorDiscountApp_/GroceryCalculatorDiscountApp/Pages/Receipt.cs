@@ -90,7 +90,7 @@ namespace GroceryCalculatorDiscountApp.Pages
 
             // Display results in labels
             sub_Total.Text = $"${subtotal.ToString("0.00")}";
-            discountAmount.Text = $"${discountAmountValue.ToString("0.00")} ({discountPercentage * 100}%)";
+            discountAmount.Text = $"${discountAmountValue.ToString("0.00")}";
             totalAmount.Text = $"${totalPayment.ToString("0.00")}";
         }
 

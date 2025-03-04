@@ -41,7 +41,7 @@ namespace GroceryCalculatorDiscountApp.Pages
         private void RefreshProductTable()
         {
             productTable.Controls.Clear(); // Clear all existing UI components
-            productTable.RowCount = 1;     // Reset row count
+            productTable.RowCount = 0;    // Reset row count
 
             // Re-add products after removing one
             foreach (var item in productData.ShoppingCart.Items)
@@ -78,6 +78,7 @@ namespace GroceryCalculatorDiscountApp.Pages
                     BackColor = Color.Red,
                     FlatStyle = FlatStyle.Flat,
                 };
+                quantityBox.TextChanged += quantityBox_TextChanged;
 
                 removeButton.FlatAppearance.BorderSize = 0;
                 removeButton.FlatAppearance.MouseOverBackColor = Color.DarkRed;
@@ -94,6 +95,33 @@ namespace GroceryCalculatorDiscountApp.Pages
                 productTable.Controls.Add(removeButton, 3, rowIndex);
             }
         }
+        private void quantityBox_TextChanged(object sender, EventArgs e)
+        {
+            // Find the TextBox that triggered this event
+            TextBox quantityBox = sender as TextBox;
+
+            if (quantityBox != null)
+            {
+                // Find the row index of the TextBox in the TableLayoutPanel
+                int rowIndex = productTable.GetRow(quantityBox);
+
+                // Check if the row index is valid
+                if (rowIndex >= 0 && rowIndex < productData.ShoppingCart.Items.Count)
+                {
+                    // Get the corresponding product item based on the row index
+                    var item = productData.ShoppingCart.Items[rowIndex];
+
+                    // Try to parse the new quantity entered by the user
+                    if (int.TryParse(quantityBox.Text, out int newQuantity) && newQuantity > 0)
+                    {
+                        // Update the quantity in the shopping cart item
+                        item.PurchasedQuantity = newQuantity;
+                    }
+               
+                }
+            }
+        }
+
 
         private void productButton_Click(object sender, EventArgs e)
         {

@@ -35,27 +35,27 @@ namespace GroceryCalculatorDiscountApp.Pages
                 if (item.Name == "Bread")
                 {
                     addBread.BackColor = Color.Green;
-                    addBread.Text = "Haggai";
+                    addBread.Text = "In cart";
                 }
                 else if (item.Name == "Apple")
                 {
                     addApple.BackColor = Color.Green;
-                    addApple.Text = "Haggai";
+                    addApple.Text = "In cart";
                 }
                 else if ( item.Name == "Orange")
                 {
                     orangeAdd.BackColor = Color.Green;
-                    orangeAdd.Text = "Haggai";
+                    orangeAdd.Text = "In cart";
                 }
                 else if (item.Name == "Banana")
                 {
                     bananaAdd.BackColor = Color.Green;
-                    bananaAdd.Text = "Haggai";
+                    bananaAdd.Text = "In cart";
                 }
                 else if (item.Name == "Milk")
                 {
                     milkAdd.BackColor = Color.Green;
-                    milkAdd.Text = "Haggai";
+                    milkAdd.Text = "In cart";
                 }
             }
 
@@ -154,7 +154,7 @@ namespace GroceryCalculatorDiscountApp.Pages
             }
             productData.ShoppingCart.Items.Add(new productData("Bread", 2.00m, 1));
             productAdded.Visible = true; // A message will appear if the product has been added.
-            addBread.Text = "Haggai";
+            addBread.Text = "In cart";
             addBread.BackColor = Color.Green; // Sets button into green if its added
         }
 
@@ -170,7 +170,7 @@ namespace GroceryCalculatorDiscountApp.Pages
             }
             productData.ShoppingCart.Items.Add(new productData("Banana", 3.00m, 1));
             productAdded.Visible = true;
-            bananaAdd.Text = "Haggai";
+            bananaAdd.Text = "In cart";
             bananaAdd.BackColor = Color.Green;
         }
 
@@ -186,7 +186,7 @@ namespace GroceryCalculatorDiscountApp.Pages
             }
             productData.ShoppingCart.Items.Add(new productData("Apple", 5.00m, 1));
             productAdded.Visible = true;
-            addApple.Text = "Haggai";
+            addApple.Text = "In cart";
             addApple.BackColor = Color.Green;
         }
 
@@ -202,7 +202,7 @@ namespace GroceryCalculatorDiscountApp.Pages
             }
             productData.ShoppingCart.Items.Add(new productData("Orange", 4.00m, 1));
             productAdded.Visible = true;
-            orangeAdd.Text = "Haggai";
+            orangeAdd.Text = "In cart";
             orangeAdd.BackColor = Color.Green;
         }
 
@@ -218,7 +218,7 @@ namespace GroceryCalculatorDiscountApp.Pages
             }
             productData.ShoppingCart.Items.Add(new productData("Milk", 2.50m, 1));
             productAdded.Visible = true;
-            milkAdd.Text = "Haggai";
+            milkAdd.Text = "In cart";
             milkAdd.BackColor = Color.Green;
         }
 
