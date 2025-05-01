@@ -15,23 +15,18 @@ namespace GroceryCalculatorDiscountApp.Pages
         public ShoppingList()
         {
             InitializeComponent();
-            //For the sidebars coloring shaders
-            panel1.BackColor = Color.FromArgb(85, 255, 255, 255);
 
             // Ensure table has correct column count
             productTable.ColumnCount = 4;
             productTable.AutoSize = true;
+            productTable.ColumnStyles.Clear();
+            productTable.RowStyles.Clear();
 
             // Fixed width for proper alignment
             productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 150)); // Product Name
             productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 100)); // Price
-            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 50));  // Quantity
-            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 40));  //X button
-            productTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
-            productTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
-            productTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
-            productTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
-            productTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
+            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 150));  // Quantity
+            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 40));  // Remove Button
             RefreshProductTable();
 
             // Shows what product has been added 
@@ -41,6 +36,7 @@ namespace GroceryCalculatorDiscountApp.Pages
         private void RefreshProductTable()
         {
             productTable.Controls.Clear(); // Clear all existing UI components
+            productTable.RowStyles.Clear();
             productTable.RowCount = 0;    // Reset row count
 
             // Re-add products after removing one
@@ -53,20 +49,25 @@ namespace GroceryCalculatorDiscountApp.Pages
                     Width = 150,
                     TextAlign = ContentAlignment.MiddleLeft,
                     Font = new Font("Arial", 14.25F, FontStyle.Regular),
+                    Dock = DockStyle.Fill
                 };
 
                 Label priceLabel = new Label
                 {
                     Text = "$" + item.Price.ToString(),
                     AutoSize = true,
-                    Font = new Font("Arial", 14.25F, FontStyle.Regular)
+                    TextAlign = ContentAlignment.MiddleRight,
+                    Font = new Font("Arial", 14.25F, FontStyle.Regular),
+                    Dock = DockStyle.Fill
                 };
 
                 TextBox quantityBox = new TextBox
                 {
                     Text = item.PurchasedQuantity.ToString(),
-                    Width = 74,
+                    Width = 60,
                     Font = new Font("Arial", 9, FontStyle.Regular),
+                    TextAlign = HorizontalAlignment.Left,
+                    Anchor = AnchorStyles.Right
                 };
 
                 Button removeButton = new Button
@@ -77,11 +78,12 @@ namespace GroceryCalculatorDiscountApp.Pages
                     ForeColor = Color.White,
                     BackColor = Color.Red,
                     FlatStyle = FlatStyle.Flat,
+                    Anchor = AnchorStyles.Right
                 };
-                quantityBox.TextChanged += quantityBox_TextChanged;
 
                 removeButton.FlatAppearance.BorderSize = 0;
                 removeButton.FlatAppearance.MouseOverBackColor = Color.DarkRed;
+                quantityBox.TextChanged += quantityBox_TextChanged;
                 removeButton.Click += (s, e) =>
                 {
                     productData.ShoppingCart.Items.Remove(item);
@@ -89,6 +91,7 @@ namespace GroceryCalculatorDiscountApp.Pages
                 };
 
                 int rowIndex = productTable.RowCount++;
+                productTable.RowStyles.Add(new RowStyle(SizeType.AutoSize));
                 productTable.Controls.Add(nameLabel, 0, rowIndex);
                 productTable.Controls.Add(priceLabel, 1, rowIndex);
                 productTable.Controls.Add(quantityBox, 2, rowIndex);
@@ -117,7 +120,7 @@ namespace GroceryCalculatorDiscountApp.Pages
                         // Update the quantity in the shopping cart item
                         item.PurchasedQuantity = newQuantity;
                     }
-               
+
                 }
             }
         }
@@ -237,6 +240,81 @@ namespace GroceryCalculatorDiscountApp.Pages
         }
 
         private void subTotal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ShoppingList_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cuiButtonGroup1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cuiButtonGroup1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cuiButtonGroup2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void ProductButton_Click_1(object sender, EventArgs e)
+        {
+            CalculateMenu calc = new CalculateMenu();
+            calc.Dock = DockStyle.Fill;
+            calc.TopLevel = false;
+            Menu.MainPanel.Controls.Clear();
+            Menu.MainPanel.Controls.Add(calc);
+            calc.Show();
+        }
+
+        private void cuiButtonGroup2_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void cuiButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cuiPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

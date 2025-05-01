@@ -33,13 +33,13 @@
             label1 = new Label();
             label2 = new Label();
             panel3 = new Panel();
-            label3 = new Label();
-            label4 = new Label();
-            discountAmount = new Label();
-            totalAmount = new Label();
-            label5 = new Label();
-            label6 = new Label();
             sub_Total = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            totalAmount = new Label();
+            discountAmount = new Label();
+            label4 = new Label();
+            label3 = new Label();
             newPurchaseButton = new Button();
             exitApp = new Button();
             productTable = new TableLayoutPanel();
@@ -65,11 +65,12 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Arial", 25F);
             label7.ForeColor = Color.FromArgb(44, 50, 58);
-            label7.Location = new Point(219, 30);
+            label7.Location = new Point(244, 26);
             label7.Name = "label7";
-            label7.Size = new Size(586, 39);
+            label7.Size = new Size(475, 39);
             label7.TabIndex = 2;
-            label7.Text = "Thanks for buying at Haggaigai's Store\r\n";
+            label7.Text = "Thanks for buying at our Store!";
+            label7.Click += label7_Click;
             // 
             // label1
             // 
@@ -109,63 +110,17 @@
             panel3.TabIndex = 3;
             panel3.Paint += panel3_Paint;
             // 
-            // label3
+            // sub_Total
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial", 18F);
-            label3.ForeColor = Color.FromArgb(44, 50, 58);
-            label3.Location = new Point(120, 8);
-            label3.Name = "label3";
-            label3.Size = new Size(62, 27);
-            label3.TabIndex = 2;
-            label3.Text = "Total";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Arial", 12.75F, FontStyle.Bold);
-            label4.ForeColor = Color.FromArgb(44, 50, 58);
-            label4.Location = new Point(23, 58);
-            label4.Name = "label4";
-            label4.Size = new Size(81, 19);
-            label4.TabIndex = 2;
-            label4.Text = "Subtotal:";
-            // 
-            // discountAmount
-            // 
-            discountAmount.AutoSize = true;
-            discountAmount.Font = new Font("Arial", 13F);
-            discountAmount.ForeColor = Color.FromArgb(44, 50, 58);
-            discountAmount.Location = new Point(196, 131);
-            discountAmount.Name = "discountAmount";
-            discountAmount.Size = new Size(55, 21);
-            discountAmount.TabIndex = 2;
-            discountAmount.Text = "$0.00";
-            discountAmount.Click += discountAmount_Click;
-            // 
-            // totalAmount
-            // 
-            totalAmount.AutoSize = true;
-            totalAmount.Font = new Font("Arial", 13F);
-            totalAmount.ForeColor = Color.FromArgb(44, 50, 58);
-            totalAmount.Location = new Point(196, 201);
-            totalAmount.Name = "totalAmount";
-            totalAmount.Size = new Size(55, 21);
-            totalAmount.TabIndex = 2;
-            totalAmount.Text = "$0.00";
-            totalAmount.Click += totalAmount_Click;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.FlatStyle = FlatStyle.System;
-            label5.Font = new Font("Arial", 12.75F, FontStyle.Bold);
-            label5.ForeColor = Color.FromArgb(44, 50, 58);
-            label5.Location = new Point(23, 131);
-            label5.Name = "label5";
-            label5.Size = new Size(149, 19);
-            label5.TabIndex = 2;
-            label5.Text = "Discount amount:";
+            sub_Total.AutoSize = true;
+            sub_Total.Font = new Font("Arial", 13F);
+            sub_Total.ForeColor = Color.FromArgb(44, 50, 58);
+            sub_Total.Location = new Point(196, 56);
+            sub_Total.Name = "sub_Total";
+            sub_Total.Size = new Size(55, 21);
+            sub_Total.TabIndex = 3;
+            sub_Total.Text = "$0.00";
+            sub_Total.Click += sub_Total_Click;
             // 
             // label6
             // 
@@ -179,17 +134,63 @@
             label6.TabIndex = 2;
             label6.Text = "Total Payment: ";
             // 
-            // sub_Total
+            // label5
             // 
-            sub_Total.AutoSize = true;
-            sub_Total.Font = new Font("Arial", 13F);
-            sub_Total.ForeColor = Color.FromArgb(44, 50, 58);
-            sub_Total.Location = new Point(196, 56);
-            sub_Total.Name = "sub_Total";
-            sub_Total.Size = new Size(55, 21);
-            sub_Total.TabIndex = 3;
-            sub_Total.Text = "$0.00";
-            sub_Total.Click += sub_Total_Click;
+            label5.AutoSize = true;
+            label5.FlatStyle = FlatStyle.System;
+            label5.Font = new Font("Arial", 12.75F, FontStyle.Bold);
+            label5.ForeColor = Color.FromArgb(44, 50, 58);
+            label5.Location = new Point(23, 131);
+            label5.Name = "label5";
+            label5.Size = new Size(149, 19);
+            label5.TabIndex = 2;
+            label5.Text = "Discount amount:";
+            // 
+            // totalAmount
+            // 
+            totalAmount.AutoSize = true;
+            totalAmount.Font = new Font("Arial", 13F);
+            totalAmount.ForeColor = Color.FromArgb(44, 50, 58);
+            totalAmount.Location = new Point(196, 201);
+            totalAmount.Name = "totalAmount";
+            totalAmount.Size = new Size(55, 21);
+            totalAmount.TabIndex = 2;
+            totalAmount.Text = "$0.00";
+            totalAmount.Click += totalAmount_Click;
+            // 
+            // discountAmount
+            // 
+            discountAmount.AutoSize = true;
+            discountAmount.Font = new Font("Arial", 13F);
+            discountAmount.ForeColor = Color.FromArgb(44, 50, 58);
+            discountAmount.Location = new Point(196, 131);
+            discountAmount.Name = "discountAmount";
+            discountAmount.Size = new Size(55, 21);
+            discountAmount.TabIndex = 2;
+            discountAmount.Text = "$0.00";
+            discountAmount.Click += discountAmount_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Arial", 12.75F, FontStyle.Bold);
+            label4.ForeColor = Color.FromArgb(44, 50, 58);
+            label4.Location = new Point(19, 58);
+            label4.Name = "label4";
+            label4.Size = new Size(81, 19);
+            label4.TabIndex = 2;
+            label4.Text = "Subtotal:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial", 18F);
+            label3.ForeColor = Color.FromArgb(44, 50, 58);
+            label3.Location = new Point(120, 8);
+            label3.Name = "label3";
+            label3.Size = new Size(62, 27);
+            label3.TabIndex = 2;
+            label3.Text = "Total";
             // 
             // newPurchaseButton
             // 
@@ -225,16 +226,18 @@
             // 
             // productTable
             // 
-            productTable.ColumnCount = 3;
-            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 52.6717567F));
-            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 47.3282433F));
-            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 109F));
+            productTable.ColumnCount = 4;
+            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 51.7241364F));
+            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 48.2758636F));
+            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 67F));
+            productTable.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 21F));
             productTable.Location = new Point(75, 162);
             productTable.Name = "productTable";
             productTable.RowCount = 1;
             productTable.RowStyles.Add(new RowStyle(SizeType.Percent, 49.0566025F));
-            productTable.Size = new Size(495, 34);
+            productTable.Size = new Size(495, 47);
             productTable.TabIndex = 6;
+            productTable.Paint += productTable_Paint;
             // 
             // panel2
             // 
@@ -256,12 +259,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(44, 50, 58);
+            BackColor = Color.FromArgb(111, 137, 217);
             ClientSize = new Size(1386, 681);
             Controls.Add(panel2);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Receipt";
             Text = "Receipt";
+            Load += Receipt_Load;
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel2.ResumeLayout(false);

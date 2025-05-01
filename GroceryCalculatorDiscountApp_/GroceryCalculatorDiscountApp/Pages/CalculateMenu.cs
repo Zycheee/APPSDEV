@@ -17,6 +17,7 @@ namespace GroceryCalculatorDiscountApp.Pages
         public CalculateMenu()
         {
             InitializeComponent();
+            ResetButton();
             addApple.FlatAppearance.BorderSize = 0;
             addBread.FlatAppearance.BorderSize = 0;
             bananaAdd.FlatAppearance.BorderSize = 0;
@@ -24,7 +25,6 @@ namespace GroceryCalculatorDiscountApp.Pages
             orangeAdd.FlatAppearance.BorderSize = 0;
             productOK.FlatAppearance.BorderSize = 0;
             //For the sidebars coloring shaders
-            panel1.BackColor = Color.FromArgb(85, 255, 255, 255);
             productAdded.BackColor = Color.FromArgb(50, 255, 255, 255);
             productAdded.Visible = false;
             productAdded.Location = new Point(645, 224);
@@ -42,7 +42,7 @@ namespace GroceryCalculatorDiscountApp.Pages
                     addApple.BackColor = Color.Green;
                     addApple.Text = "In cart";
                 }
-                else if ( item.Name == "Orange")
+                else if (item.Name == "Orange")
                 {
                     orangeAdd.BackColor = Color.Green;
                     orangeAdd.Text = "In cart";
@@ -60,11 +60,11 @@ namespace GroceryCalculatorDiscountApp.Pages
             }
 
             //Adding image for each product that is in stock
-            appleImage.Image = Image.FromFile(@"Z:\XX515\GroceryCalculatorDiscountApp_\GroceryCalculatorDiscountApp\Images\Apple.jpg");
-            bananaImage.Image = Image.FromFile(@"Z:\XX515\GroceryCalculatorDiscountApp_\GroceryCalculatorDiscountApp\Images\Banana.jpg");
-            orangeImage.Image = Image.FromFile(@"Z:\XX515\GroceryCalculatorDiscountApp_\GroceryCalculatorDiscountApp\Images\Orange.jpg");
-            milkImage.Image = Image.FromFile(@"Z:\XX515\GroceryCalculatorDiscountApp_\GroceryCalculatorDiscountApp\Images\Milk.jpg");
-            breadImage.Image = Image.FromFile(@"Z:\XX515\GroceryCalculatorDiscountApp_\GroceryCalculatorDiscountApp\Images\Bread.jpg");
+            //appleImage.Image = Image.FromFile(@"Z:\XX515\GroceryCalculatorDiscountApp_\GroceryCalculatorDiscountApp\Images\Apple.jpg");
+            //bananaImage.Image = Image.FromFile(@"Z:\XX515\GroceryCalculatorDiscountApp_\GroceryCalculatorDiscountApp\Images\Banana.jpg");
+            //orangeImage.Image = Image.FromFile(@"Z:\XX515\GroceryCalculatorDiscountApp_\GroceryCalculatorDiscountApp\Images\Orange.jpg");
+            //milkImage.Image = Image.FromFile(@"Z:\XX515\GroceryCalculatorDiscountApp_\GroceryCalculatorDiscountApp\Images\Milk.jpg");
+            //breadImage.Image = Image.FromFile(@"Z:\XX515\GroceryCalculatorDiscountApp_\GroceryCalculatorDiscountApp\Images\Bread.jpg");
 
             //Adjust the Size, Layout, Aspect Ratio of each product images
             appleImage.Size = new Size(228, 162);
@@ -86,6 +86,21 @@ namespace GroceryCalculatorDiscountApp.Pages
             breadImage.Size = new Size(228, 162);
             breadImage.Location = new Point(10, 14);
             breadImage.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+
+        public void ResetButton()
+        {
+            addApple.Text = "Add";
+            addBread.Text = "Add";
+            bananaAdd.Text = "Add";
+            milkAdd.Text = "Add";
+            orangeAdd.Text = "Add";
+            addApple.BackColor = Color.FromArgb(44, 50, 58);
+            addBread.BackColor = Color.FromArgb(44, 50, 58);
+            milkAdd.BackColor = Color.FromArgb(44, 50, 58);
+            orangeAdd.BackColor = Color.FromArgb(44, 50, 58);
+            bananaAdd.BackColor = Color.FromArgb(44, 50, 58);
+            productAdded.Visible = false;
         }
 
         private void checkoutButton_Click(object sender, EventArgs e)
@@ -147,7 +162,6 @@ namespace GroceryCalculatorDiscountApp.Pages
             {
                 if (item.Name == "Bread")
                 {
-                    addBread.BackColor = Color.Green;
                     MessageBox.Show($"The {item.Name} product already exist in Shopping Cart.", "Error of Adding Product", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
@@ -234,6 +248,51 @@ namespace GroceryCalculatorDiscountApp.Pages
         private void productButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void productButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkoutButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cuiButtonGroup2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void cuiButtonGroup1_Click(object sender, EventArgs e)
+        {
+            ShoppingList shoppingList = new ShoppingList();
+            shoppingList.Dock = DockStyle.Fill;
+            shoppingList.TopLevel = false;
+            Menu.MainPanel.Controls.Clear();
+            Menu.MainPanel.Controls.Add(shoppingList);
+            shoppingList.Show();
+        }
+
+        private void panel1_Paint_2(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cuiButton1_Click(object sender, EventArgs e)
+        {
+        
         }
     }
 }

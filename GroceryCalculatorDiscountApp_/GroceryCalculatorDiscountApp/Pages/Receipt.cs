@@ -11,7 +11,7 @@ namespace GroceryCalculatorDiscountApp.Pages
             InitializeComponent();
 
             // Ensure table has correct column count
-            productTable.ColumnCount = 3;
+            productTable.ColumnCount = 4;
             productTable.AutoSize = true;
 
             // Fixed width for proper alignment
@@ -96,13 +96,16 @@ namespace GroceryCalculatorDiscountApp.Pages
 
         private void newPurchaseButton_Click(object sender, EventArgs e)
         {
-            SelectMenu calc = new SelectMenu();
+            CalculateMenu calc = new CalculateMenu();
             calc.Dock = DockStyle.Fill;
             calc.TopLevel = false;
+
             Menu.MainPanel.Controls.Clear();
             Menu.MainPanel.Controls.Add(calc);
-            calc.Show();
+
             productData.ShoppingCart.Items.Clear();
+            calc.ResetButton();
+            calc.Show();
         }
 
         private void exitApp_Click(object sender, EventArgs e)
@@ -110,25 +113,45 @@ namespace GroceryCalculatorDiscountApp.Pages
             Application.Exit();
         }
 
-        
+
         private void discountAmount_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void totalAmount_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void sub_Total_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void Receipt_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productTable_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

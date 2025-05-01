@@ -31,6 +31,7 @@
             titleText = new Label();
             button1 = new Button();
             exitButton = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // titleText
@@ -41,9 +42,9 @@
             titleText.ForeColor = Color.White;
             titleText.Location = new Point(241, 255);
             titleText.Name = "titleText";
-            titleText.Size = new Size(987, 75);
+            titleText.Size = new Size(908, 75);
             titleText.TabIndex = 1;
-            titleText.Text = "Welcome to Grocery Calculator";
+            titleText.Text = "Welcome to the Grocery App";
             titleText.Click += titleText_Click;
             // 
             // button1
@@ -54,11 +55,11 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Black;
-            button1.Location = new Point(480, 374);
+            button1.Location = new Point(576, 374);
             button1.Name = "button1";
             button1.Size = new Size(234, 68);
             button1.TabIndex = 2;
-            button1.Text = "Add a product";
+            button1.Text = "Purchase Product";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
             button1.MouseEnter += button1_MouseEnter;
@@ -71,7 +72,7 @@
             exitButton.FlatStyle = FlatStyle.Flat;
             exitButton.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             exitButton.ForeColor = Color.White;
-            exitButton.Location = new Point(741, 374);
+            exitButton.Location = new Point(898, 374);
             exitButton.Name = "exitButton";
             exitButton.Size = new Size(234, 68);
             exitButton.TabIndex = 3;
@@ -81,12 +82,28 @@
             exitButton.MouseEnter += exitButton_MouseEnter;
             exitButton.MouseLeave += exitButton_MouseLeave;
             // 
+            // button2
+            // 
+            button2.BackColor = Color.Gold;
+            button2.BackgroundImageLayout = ImageLayout.Center;
+            button2.Cursor = Cursors.Hand;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.Black;
+            button2.Location = new Point(254, 374);
+            button2.Name = "button2";
+            button2.Size = new Size(234, 68);
+            button2.TabIndex = 4;
+            button2.Text = "Go to Admin Page";
+            button2.UseVisualStyleBackColor = false;
+            // 
             // SelectMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(44, 50, 58);
+            BackColor = Color.FromArgb(111, 137, 217);
             ClientSize = new Size(1424, 681);
+            Controls.Add(button2);
             Controls.Add(exitButton);
             Controls.Add(button1);
             Controls.Add(titleText);
@@ -101,5 +118,6 @@
         private Label titleText;
         private Button button1;
         private Button exitButton;
+        private Button button2;
     }
 }

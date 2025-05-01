@@ -17,9 +17,6 @@ namespace GroceryCalculatorDiscountApp.Pages
             InitializeComponent();
             exitButton.FlatAppearance.BorderSize = 0;
             button1.FlatAppearance.BorderSize = 0;
-            exitButton.BackColor = Color.Gray;
-
-
         }
 
         private void titleText_Click(object sender, EventArgs e)

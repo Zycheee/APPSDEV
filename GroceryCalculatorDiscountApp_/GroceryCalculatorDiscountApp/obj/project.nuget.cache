@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "rgBiEMWIHyI=",
+  "dgSpecHash": "1ORMrqPcOzQ=",
   "success": true,
-  "projectFilePath": "Z:\\XX515\\GroceryCalculatorDiscountApp_\\GroceryCalculatorDiscountApp\\GroceryCalculatorDiscountApp.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Angelo\\Documents\\APPSDEV-main\\GroceryCalculatorDiscountApp_\\GroceryCalculatorDiscountApp\\GroceryCalculatorDiscountApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Angelo\\.nuget\\packages\\cuoreui.winforms\\2025.4.25\\cuoreui.winforms.2025.4.25.nupkg.sha512"
+  ],
   "logs": []
 }
