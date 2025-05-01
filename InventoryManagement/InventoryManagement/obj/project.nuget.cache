@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "kCf2Vc/6Ln8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\chris\\Documents\\C#\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\chris\\.nuget\\packages\\cuoreui.winforms\\2025.4.25\\cuoreui.winforms.2025.4.25.nupkg.sha512"
+  ],
+  "logs": []
+}
