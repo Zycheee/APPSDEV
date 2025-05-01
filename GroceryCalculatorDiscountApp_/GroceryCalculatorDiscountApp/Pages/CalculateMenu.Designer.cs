@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            checkoutButton = new Button();
-            exitButton = new Button();
-            productButton = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalculateMenu));
             label2 = new Label();
             applePanel = new Panel();
             addApple = new Button();
@@ -62,7 +59,14 @@
             breadImage = new PictureBox();
             label11 = new Label();
             label7 = new Label();
-            panel1.SuspendLayout();
+            panel1 = new Panel();
+            SideProductItemPage = new CuoreUI.Controls.cuiPanel();
+            ProductButton = new CuoreUI.Controls.cuiButton();
+            cuiButtonGroup2 = new CuoreUI.Controls.cuiButtonGroup();
+            pictureBox1 = new PictureBox();
+            cuiButtonGroup1 = new CuoreUI.Controls.cuiButtonGroup();
+            label13 = new Label();
+            label14 = new Label();
             applePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)appleImage).BeginInit();
             productAdded.SuspendLayout();
@@ -74,78 +78,20 @@
             ((System.ComponentModel.ISupportInitialize)milkImage).BeginInit();
             breadPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)breadImage).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.DimGray;
-            panel1.Controls.Add(checkoutButton);
-            panel1.Controls.Add(exitButton);
-            panel1.Controls.Add(productButton);
-            panel1.Location = new Point(30, 19);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(268, 641);
-            panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
-            // 
-            // checkoutButton
-            // 
-            checkoutButton.BackColor = Color.Transparent;
-            checkoutButton.Cursor = Cursors.Hand;
-            checkoutButton.FlatStyle = FlatStyle.Flat;
-            checkoutButton.Font = new Font("Arial", 15F);
-            checkoutButton.ForeColor = Color.White;
-            checkoutButton.Location = new Point(12, 122);
-            checkoutButton.Name = "checkoutButton";
-            checkoutButton.Size = new Size(243, 59);
-            checkoutButton.TabIndex = 3;
-            checkoutButton.TabStop = false;
-            checkoutButton.Text = "Shopping Cart";
-            checkoutButton.UseVisualStyleBackColor = false;
-            checkoutButton.Click += checkoutButton_Click;
-            // 
-            // exitButton
-            // 
-            exitButton.BackColor = Color.Transparent;
-            exitButton.Cursor = Cursors.Hand;
-            exitButton.FlatStyle = FlatStyle.Flat;
-            exitButton.Font = new Font("Arial", 15F);
-            exitButton.ForeColor = Color.White;
-            exitButton.Location = new Point(12, 562);
-            exitButton.Name = "exitButton";
-            exitButton.Size = new Size(243, 59);
-            exitButton.TabIndex = 3;
-            exitButton.TabStop = false;
-            exitButton.Text = "Exit";
-            exitButton.UseVisualStyleBackColor = false;
-            exitButton.Click += exitButton_Click_1;
-            // 
-            // productButton
-            // 
-            productButton.BackColor = Color.Transparent;
-            productButton.Cursor = Cursors.Hand;
-            productButton.FlatStyle = FlatStyle.Flat;
-            productButton.Font = new Font("Arial", 15F);
-            productButton.ForeColor = Color.White;
-            productButton.Location = new Point(12, 43);
-            productButton.Name = "productButton";
-            productButton.Size = new Size(243, 59);
-            productButton.TabIndex = 3;
-            productButton.TabStop = false;
-            productButton.Text = "Products";
-            productButton.UseVisualStyleBackColor = false;
-            productButton.Click += productButton_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 39.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(742, 19);
+            label2.Location = new Point(637, 15);
             label2.Name = "label2";
-            label2.Size = new Size(226, 62);
+            label2.Size = new Size(459, 62);
             label2.TabIndex = 2;
-            label2.Text = "In stock";
+            label2.Text = "Product Item List";
             // 
             // applePanel
             // 
@@ -213,10 +159,12 @@
             // 
             // productAdded
             // 
+            productAdded.BackColor = Color.CornflowerBlue;
             productAdded.Controls.Add(productOK);
             productAdded.Controls.Add(label12);
             productAdded.Controls.Add(label1);
-            productAdded.Location = new Point(1054, 402);
+            productAdded.ForeColor = Color.Transparent;
+            productAdded.Location = new Point(1038, 399);
             productAdded.Name = "productAdded";
             productAdded.Size = new Size(427, 241);
             productAdded.TabIndex = 9;
@@ -512,12 +460,188 @@
             label7.Text = "Bread";
             label7.Click += label3_Click;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(64, 79, 115);
+            panel1.Controls.Add(SideProductItemPage);
+            panel1.Controls.Add(ProductButton);
+            panel1.Controls.Add(cuiButtonGroup2);
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(cuiButtonGroup1);
+            panel1.Controls.Add(label13);
+            panel1.Controls.Add(label14);
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(292, 749);
+            panel1.TabIndex = 10;
+            panel1.Paint += panel1_Paint_2;
+            // 
+            // SideProductItemPage
+            // 
+            SideProductItemPage.Location = new Point(-12, 102);
+            SideProductItemPage.Name = "SideProductItemPage";
+            SideProductItemPage.OutlineThickness = 1F;
+            SideProductItemPage.PanelColor = Color.FromArgb(59, 143, 253);
+            SideProductItemPage.PanelOutlineColor = Color.FromArgb(59, 143, 253);
+            SideProductItemPage.Rounding = new Padding(8);
+            SideProductItemPage.Size = new Size(22, 76);
+            SideProductItemPage.TabIndex = 11;
+            // 
+            // ProductButton
+            // 
+            ProductButton.BackColor = Color.Transparent;
+            ProductButton.BackgroundImageLayout = ImageLayout.None;
+            ProductButton.CheckButton = false;
+            ProductButton.Checked = false;
+            ProductButton.CheckedBackground = Color.Transparent;
+            ProductButton.CheckedForeColor = Color.Transparent;
+            ProductButton.CheckedImageTint = Color.Transparent;
+            ProductButton.CheckedOutline = Color.Transparent;
+            ProductButton.Content = "Product Items";
+            ProductButton.DialogResult = DialogResult.None;
+            ProductButton.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ProductButton.ForeColor = Color.White;
+            ProductButton.HoverBackground = Color.FromArgb(96, 138, 227);
+            ProductButton.HoveredImageTint = Color.FromArgb(96, 138, 227);
+            ProductButton.HoverForeColor = Color.White;
+            ProductButton.HoverOutline = Color.Transparent;
+            ProductButton.Image = (Image)resources.GetObject("ProductButton.Image");
+            ProductButton.ImageAutoCenter = true;
+            ProductButton.ImageExpand = new Point(7, 7);
+            ProductButton.ImageOffset = new Point(-20, 0);
+            ProductButton.Location = new Point(16, 99);
+            ProductButton.Name = "ProductButton";
+            ProductButton.NormalBackground = Color.Transparent;
+            ProductButton.NormalForeColor = Color.White;
+            ProductButton.NormalImageTint = Color.White;
+            ProductButton.NormalOutline = Color.Transparent;
+            ProductButton.OutlineThickness = 1F;
+            ProductButton.PressedBackground = Color.FromArgb(103, 152, 255);
+            ProductButton.PressedForeColor = Color.White;
+            ProductButton.PressedImageTint = Color.FromArgb(96, 138, 227);
+            ProductButton.PressedOutline = Color.Transparent;
+            ProductButton.Rounding = new Padding(8);
+            ProductButton.Size = new Size(251, 74);
+            ProductButton.TabIndex = 1;
+            ProductButton.TextAlignment = StringAlignment.Center;
+            ProductButton.TextOffset = new Point(0, 0);
+            ProductButton.Click += cuiButton1_Click;
+            // 
+            // cuiButtonGroup2
+            // 
+            cuiButtonGroup2.BackColor = Color.Transparent;
+            cuiButtonGroup2.BackgroundImageLayout = ImageLayout.None;
+            cuiButtonGroup2.CausesValidation = false;
+            cuiButtonGroup2.Checked = false;
+            cuiButtonGroup2.CheckedBackground = Color.Transparent;
+            cuiButtonGroup2.CheckedForeColor = Color.Transparent;
+            cuiButtonGroup2.CheckedImageTint = Color.Transparent;
+            cuiButtonGroup2.CheckedOutline = Color.Transparent;
+            cuiButtonGroup2.Content = "Exit";
+            cuiButtonGroup2.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButtonGroup2.ForeColor = Color.White;
+            cuiButtonGroup2.Group = 0;
+            cuiButtonGroup2.HoverBackground = Color.FromArgb(96, 138, 227);
+            cuiButtonGroup2.HoveredImageTint = Color.FromArgb(96, 138, 227);
+            cuiButtonGroup2.HoverForeColor = Color.White;
+            cuiButtonGroup2.HoverOutline = Color.Transparent;
+            cuiButtonGroup2.Image = (Image)resources.GetObject("cuiButtonGroup2.Image");
+            cuiButtonGroup2.ImageAutoCenter = true;
+            cuiButtonGroup2.ImageExpand = new Point(7, 7);
+            cuiButtonGroup2.ImageOffset = new Point(-20, 0);
+            cuiButtonGroup2.Location = new Point(16, 541);
+            cuiButtonGroup2.Name = "cuiButtonGroup2";
+            cuiButtonGroup2.NormalBackground = Color.Transparent;
+            cuiButtonGroup2.NormalForeColor = Color.White;
+            cuiButtonGroup2.NormalImageTint = Color.White;
+            cuiButtonGroup2.NormalOutline = Color.Transparent;
+            cuiButtonGroup2.OutlineThickness = 1F;
+            cuiButtonGroup2.PressedBackground = Color.FromArgb(103, 152, 255);
+            cuiButtonGroup2.PressedForeColor = Color.White;
+            cuiButtonGroup2.PressedImageTint = Color.FromArgb(96, 138, 227);
+            cuiButtonGroup2.PressedOutline = Color.Transparent;
+            cuiButtonGroup2.Rounding = new Padding(8);
+            cuiButtonGroup2.Size = new Size(251, 74);
+            cuiButtonGroup2.TabIndex = 13;
+            cuiButtonGroup2.TextAlignment = StringAlignment.Center;
+            cuiButtonGroup2.TextOffset = new Point(0, 3);
+            cuiButtonGroup2.Click += cuiButtonGroup2_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Location = new Point(12, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(75, 72);
+            pictureBox1.TabIndex = 12;
+            pictureBox1.TabStop = false;
+            // 
+            // cuiButtonGroup1
+            // 
+            cuiButtonGroup1.BackColor = Color.Transparent;
+            cuiButtonGroup1.CausesValidation = false;
+            cuiButtonGroup1.Checked = false;
+            cuiButtonGroup1.CheckedBackground = Color.Transparent;
+            cuiButtonGroup1.CheckedForeColor = Color.Transparent;
+            cuiButtonGroup1.CheckedImageTint = Color.Transparent;
+            cuiButtonGroup1.CheckedOutline = Color.Transparent;
+            cuiButtonGroup1.Content = "Shopping Cart";
+            cuiButtonGroup1.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiButtonGroup1.ForeColor = Color.White;
+            cuiButtonGroup1.Group = 0;
+            cuiButtonGroup1.HoverBackground = Color.FromArgb(96, 138, 227);
+            cuiButtonGroup1.HoveredImageTint = Color.FromArgb(96, 138, 227);
+            cuiButtonGroup1.HoverForeColor = Color.White;
+            cuiButtonGroup1.HoverOutline = Color.Transparent;
+            cuiButtonGroup1.Image = (Image)resources.GetObject("cuiButtonGroup1.Image");
+            cuiButtonGroup1.ImageAutoCenter = true;
+            cuiButtonGroup1.ImageExpand = new Point(7, 7);
+            cuiButtonGroup1.ImageOffset = new Point(-20, 0);
+            cuiButtonGroup1.Location = new Point(16, 176);
+            cuiButtonGroup1.Name = "cuiButtonGroup1";
+            cuiButtonGroup1.NormalBackground = Color.Transparent;
+            cuiButtonGroup1.NormalForeColor = Color.White;
+            cuiButtonGroup1.NormalImageTint = Color.White;
+            cuiButtonGroup1.NormalOutline = Color.Transparent;
+            cuiButtonGroup1.OutlineThickness = 1F;
+            cuiButtonGroup1.PressedBackground = Color.FromArgb(103, 152, 255);
+            cuiButtonGroup1.PressedForeColor = Color.White;
+            cuiButtonGroup1.PressedImageTint = Color.FromArgb(96, 138, 227);
+            cuiButtonGroup1.PressedOutline = Color.Transparent;
+            cuiButtonGroup1.Rounding = new Padding(8);
+            cuiButtonGroup1.Size = new Size(253, 74);
+            cuiButtonGroup1.TabIndex = 4;
+            cuiButtonGroup1.TextAlignment = StringAlignment.Center;
+            cuiButtonGroup1.TextOffset = new Point(0, 3);
+            cuiButtonGroup1.Click += cuiButtonGroup1_Click;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label13.ForeColor = SystemColors.ButtonHighlight;
+            label13.Location = new Point(84, 38);
+            label13.Name = "label13";
+            label13.Size = new Size(160, 24);
+            label13.TabIndex = 5;
+            label13.Text = "Customer Mart";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(114, 77);
+            label14.Name = "label14";
+            label14.Size = new Size(0, 15);
+            label14.TabIndex = 4;
+            // 
             // CalculateMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(44, 50, 58);
+            BackColor = Color.FromArgb(111, 137, 217);
             ClientSize = new Size(1424, 681);
+            Controls.Add(panel1);
             Controls.Add(productAdded);
             Controls.Add(orangePanel);
             Controls.Add(bananaPanel);
@@ -525,12 +649,10 @@
             Controls.Add(milkPanel);
             Controls.Add(applePanel);
             Controls.Add(label2);
-            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "CalculateMenu";
             Text = "v";
             Load += CalculateMenu_Load;
-            panel1.ResumeLayout(false);
             applePanel.ResumeLayout(false);
             applePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)appleImage).EndInit();
@@ -548,13 +670,14 @@
             breadPanel.ResumeLayout(false);
             breadPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)breadImage).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Panel panel1;
         private Label label2;
         private Panel applePanel;
         private PictureBox appleImage;
@@ -581,12 +704,17 @@
         private Label label9;
         private Label label10;
         private Label label11;
-        private Button checkoutButton;
-        private Button productButton;
-        private Button exitButton;
         private Label label1;
         private Label label12;
         private Panel productAdded;
         private Button productOK;
+        private Panel panel1;
+        private CuoreUI.Controls.cuiButtonGroup cuiButtonGroup2;
+        private PictureBox pictureBox1;
+        private CuoreUI.Controls.cuiButtonGroup cuiButtonGroup1;
+        private Label label13;
+        private Label label14;
+        private CuoreUI.Controls.cuiButton ProductButton;
+        private CuoreUI.Controls.cuiPanel SideProductItemPage;
     }
 }
