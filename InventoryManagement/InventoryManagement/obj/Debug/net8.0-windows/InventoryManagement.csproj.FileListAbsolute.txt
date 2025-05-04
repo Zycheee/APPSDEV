@@ -22,3 +22,5 @@ C:\Users\chris\Documents\C#\InventoryManagement\InventoryManagement\obj\Debug\ne
 C:\Users\chris\Documents\C#\InventoryManagement\InventoryManagement\obj\Debug\net8.0-windows\InventoryManagement.InventoryPage.resources
 C:\Users\chris\Documents\C#\InventoryManagement\InventoryManagement\obj\Debug\net8.0-windows\InventoryManagement.ReportPage.resources
 C:\Users\chris\Documents\C#\InventoryManagement\InventoryManagement\obj\Debug\net8.0-windows\InventoryManagement.SalesPage.resources
+C:\Users\chris\Documents\C#\InventoryManagement\InventoryManagement\obj\Debug\net8.0-windows\InventoryManagement.TutorialPage.resources
+C:\Users\chris\Documents\C#\InventoryManagement\InventoryManagement\obj\Debug\net8.0-windows\InventoryManagement.FilteredSalesReport.resources

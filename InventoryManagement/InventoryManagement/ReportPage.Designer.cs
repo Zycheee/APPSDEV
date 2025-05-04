@@ -28,96 +28,139 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            grid = new DataGridView();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)grid).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportPage));
+            panel1 = new Panel();
+            datePicker2 = new CuoreUI.Controls.cuiCalendarDatePicker();
+            label1 = new Label();
+            submitButton = new CuoreUI.Controls.cuiButton();
+            salesText = new Label();
+            datePicker1 = new CuoreUI.Controls.cuiCalendarDatePicker();
             SuspendLayout();
             // 
-            // grid
+            // panel1
             // 
-            grid.AllowUserToAddRows = false;
-            grid.AllowUserToDeleteRows = false;
-            grid.AllowUserToResizeColumns = false;
-            grid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(111, 137, 217);
-            grid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            grid.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            grid.BackgroundColor = Color.FromArgb(111, 137, 217);
-            grid.BorderStyle = BorderStyle.None;
-            grid.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            grid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(75, 91, 137);
-            dataGridViewCellStyle2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(75, 91, 137);
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            grid.ColumnHeadersHeight = 30;
-            grid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            grid.Columns.AddRange(new DataGridViewColumn[] { Column4, Column1, Column5, Column2 });
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(136, 165, 253);
-            dataGridViewCellStyle5.Font = new Font("Arial", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = Color.WhiteSmoke;
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(194, 208, 249);
-            dataGridViewCellStyle5.SelectionForeColor = Color.White;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            grid.DefaultCellStyle = dataGridViewCellStyle5;
-            grid.EnableHeadersVisualStyles = false;
-            grid.Location = new Point(28, 95);
-            grid.Name = "grid";
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            grid.RowHeadersVisible = false;
-            grid.RowTemplate.Height = 50;
-            grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            grid.Size = new Size(963, 488);
-            grid.TabIndex = 4;
-            grid.CellContentClick += grid_CellContentClick;
+            panel1.BackColor = Color.FromArgb(111, 137, 217);
+            panel1.Location = new Point(-2, 263);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1021, 416);
+            panel1.TabIndex = 21;
+            panel1.Paint += panel1_Paint;
             // 
-            // Column4
+            // datePicker2
             // 
-            Column4.HeaderText = "Daily Sales";
-            Column4.Name = "Column4";
+            datePicker2.BackColor = Color.Transparent;
+            datePicker2.EnableThemeChangeButton = true;
+            datePicker2.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            datePicker2.ForeColor = Color.WhiteSmoke;
+            datePicker2.HoverBackground = Color.FromArgb(50, 128, 128, 128);
+            datePicker2.HoverOutline = Color.FromArgb(180, 128, 128, 128);
+            datePicker2.Icon = (Image)resources.GetObject("datePicker2.Icon");
+            datePicker2.IconTint = Color.WhiteSmoke;
+            datePicker2.Location = new Point(535, 103);
+            datePicker2.Margin = new Padding(7, 4, 7, 4);
+            datePicker2.Name = "datePicker2";
+            datePicker2.NormalBackground = Color.FromArgb(65, 66, 85);
+            datePicker2.NormalOutline = Color.FromArgb(150, 128, 128, 128);
+            datePicker2.OutlineThickness = 1.5F;
+            datePicker2.PressedBackground = Color.FromArgb(80, 128, 128, 128);
+            datePicker2.PressedOutline = Color.FromArgb(210, 128, 128, 128);
+            datePicker2.Rounding = 8;
+            datePicker2.ShowIcon = true;
+            datePicker2.Size = new Size(260, 78);
+            datePicker2.TabIndex = 0;
+            datePicker2.Theme = CuoreUI.Controls.Forms.DatePicker.Themes.Light;
+            datePicker2.Value = new DateTime(2025, 5, 1, 0, 0, 0, 0);
+            datePicker2.Load += datePicker2_Load;
             // 
-            // Column1
+            // label1
             // 
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            Column1.DefaultCellStyle = dataGridViewCellStyle3;
-            Column1.HeaderText = "Date of Daily Sales";
-            Column1.Name = "Column1";
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.DimGray;
+            label1.Location = new Point(485, 103);
+            label1.Name = "label1";
+            label1.Size = new Size(40, 56);
+            label1.TabIndex = 1;
+            label1.Text = "-";
             // 
-            // Column5
+            // submitButton
             // 
-            Column5.HeaderText = "Monthly Sales";
-            Column5.Name = "Column5";
+            submitButton.BackColor = Color.Transparent;
+            submitButton.BackgroundImageLayout = ImageLayout.None;
+            submitButton.CheckButton = false;
+            submitButton.Checked = false;
+            submitButton.CheckedBackground = Color.Transparent;
+            submitButton.CheckedForeColor = Color.Transparent;
+            submitButton.CheckedImageTint = Color.Transparent;
+            submitButton.CheckedOutline = Color.Transparent;
+            submitButton.Content = "Submit";
+            submitButton.Cursor = Cursors.Hand;
+            submitButton.DialogResult = DialogResult.None;
+            submitButton.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            submitButton.ForeColor = Color.WhiteSmoke;
+            submitButton.HoverBackground = Color.FromArgb(2, 44, 120);
+            submitButton.HoveredImageTint = Color.Firebrick;
+            submitButton.HoverForeColor = Color.WhiteSmoke;
+            submitButton.HoverOutline = Color.Transparent;
+            submitButton.Image = null;
+            submitButton.ImageAutoCenter = true;
+            submitButton.ImageExpand = new Point(7, 7);
+            submitButton.ImageOffset = new Point(-20, 0);
+            submitButton.Location = new Point(443, 194);
+            submitButton.Name = "submitButton";
+            submitButton.NormalBackground = Color.FromArgb(37, 53, 76);
+            submitButton.NormalForeColor = Color.WhiteSmoke;
+            submitButton.NormalImageTint = Color.White;
+            submitButton.NormalOutline = Color.Transparent;
+            submitButton.OutlineThickness = 1F;
+            submitButton.PressedBackground = Color.FromArgb(0, 2, 6);
+            submitButton.PressedForeColor = Color.WhiteSmoke;
+            submitButton.PressedImageTint = Color.Firebrick;
+            submitButton.PressedOutline = Color.Transparent;
+            submitButton.Rounding = new Padding(8);
+            submitButton.Size = new Size(131, 57);
+            submitButton.TabIndex = 5;
+            submitButton.TextAlignment = StringAlignment.Center;
+            submitButton.TextOffset = new Point(0, 0);
+            submitButton.Click += submitButton_Click_1;
             // 
-            // Column2
+            // salesText
             // 
-            dataGridViewCellStyle4.Format = "d";
-            dataGridViewCellStyle4.NullValue = null;
-            Column2.DefaultCellStyle = dataGridViewCellStyle4;
-            Column2.HeaderText = "Date of Monthly Sales";
-            Column2.Name = "Column2";
+            salesText.AutoSize = true;
+            salesText.Font = new Font("Arial", 36F, FontStyle.Bold);
+            salesText.ForeColor = Color.White;
+            salesText.Location = new Point(343, 21);
+            salesText.Name = "salesText";
+            salesText.Size = new Size(318, 56);
+            salesText.TabIndex = 22;
+            salesText.Text = "Sales Report";
+            salesText.Click += salesText_Click;
+            // 
+            // datePicker1
+            // 
+            datePicker1.BackColor = Color.Transparent;
+            datePicker1.EnableThemeChangeButton = true;
+            datePicker1.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            datePicker1.ForeColor = Color.WhiteSmoke;
+            datePicker1.HoverBackground = Color.FromArgb(50, 128, 128, 128);
+            datePicker1.HoverOutline = Color.FromArgb(180, 128, 128, 128);
+            datePicker1.Icon = (Image)resources.GetObject("datePicker1.Icon");
+            datePicker1.IconTint = Color.WhiteSmoke;
+            datePicker1.Location = new Point(215, 103);
+            datePicker1.Margin = new Padding(7, 4, 7, 4);
+            datePicker1.Name = "datePicker1";
+            datePicker1.NormalBackground = Color.FromArgb(65, 66, 85);
+            datePicker1.NormalOutline = Color.FromArgb(150, 128, 128, 128);
+            datePicker1.OutlineThickness = 1.5F;
+            datePicker1.PressedBackground = Color.FromArgb(80, 128, 128, 128);
+            datePicker1.PressedOutline = Color.FromArgb(210, 128, 128, 128);
+            datePicker1.Rounding = 8;
+            datePicker1.ShowIcon = true;
+            datePicker1.Size = new Size(260, 78);
+            datePicker1.TabIndex = 23;
+            datePicker1.Theme = CuoreUI.Controls.Forms.DatePicker.Themes.Light;
+            datePicker1.Value = new DateTime(2025, 5, 1, 0, 0, 0, 0);
+            datePicker1.Load += datePicker1_Load_1;
             // 
             // ReportPage
             // 
@@ -125,20 +168,35 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(111, 137, 217);
             ClientSize = new Size(1019, 679);
-            Controls.Add(grid);
+            Controls.Add(datePicker1);
+            Controls.Add(salesText);
+            Controls.Add(submitButton);
+            Controls.Add(label1);
+            Controls.Add(datePicker2);
+            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ReportPage";
             Text = "ReportPage";
-            ((System.ComponentModel.ISupportInitialize)grid).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private DataGridView grid;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column2;
+        private CuoreUI.Controls.cuiLabel dailySales;
+        private CuoreUI.Controls.cuiLabel cuiLabel3;
+        private CuoreUI.Controls.cuiLabel cuiLabel1;
+        private Panel panel1;
+        private CuoreUI.Controls.cuiPanel dailySalesBar;
+        private CuoreUI.Controls.cuiButton salesReppo;
+        private CuoreUI.Controls.cuiButton monthlySalesButton;
+        private CuoreUI.Controls.cuiPanel monthlySalesBar;
+        private CuoreUI.Controls.cuiButton annualSalesButton;
+        private CuoreUI.Controls.cuiPanel annualSalesBar;
+        private CuoreUI.Controls.cuiCalendarDatePicker datePicker2;
+        private Label label1;
+        private CuoreUI.Controls.cuiButton submitButton;
+        private Label salesText;
+        private CuoreUI.Controls.cuiCalendarDatePicker datePicker1;
     }
 }
