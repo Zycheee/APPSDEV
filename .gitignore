@@ -1,0 +1,11 @@
+# Visual Studio files
+.vs/
+*.suo
+*.user
+bin/
+obj/
+
+# Other common ignores
+*.log
+*.bak
+*.tmp 
