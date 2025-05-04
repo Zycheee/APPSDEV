@@ -511,6 +511,7 @@
             grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             grid.Size = new Size(963, 416);
             grid.TabIndex = 24;
+            grid.CellContentClick += grid_CellContentClick;
             // 
             // Column1
             // 

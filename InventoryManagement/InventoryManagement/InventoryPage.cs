@@ -15,9 +15,64 @@ namespace InventoryManagement
         public InventoryPage()
         {
             InitializeComponent();
+
+            // Add a link column instead of a button column
+            DataGridViewLinkColumn deleteColumn = new DataGridViewLinkColumn();
+            deleteColumn.HeaderText = "";
+            deleteColumn.Name = "DeleteButton";
+            deleteColumn.Text = "Remove";
+            deleteColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;    
+            deleteColumn.UseColumnTextForLinkValue = true;
+            deleteColumn.Width = 30;
+            deleteColumn.LinkColor = Color.Red;
+            deleteColumn.VisitedLinkColor = Color.Red;
+            deleteColumn.ActiveLinkColor = Color.Red;
+            deleteColumn.LinkBehavior = LinkBehavior.NeverUnderline;
+            deleteColumn.DefaultCellStyle.BackColor = grid.BackColor;
+            deleteColumn.DefaultCellStyle.SelectionBackColor = grid.BackColor;
+            grid.Columns.Add(deleteColumn);
+
+            // Add sample data
             for (int i = 0; i < 50; i++)
             {
                 grid.Rows.Add(i, "Item " + i, (10 + i));
+            }
+
+            // Disable selection highlighting for the grid
+            grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            grid.DefaultCellStyle.SelectionBackColor = grid.DefaultCellStyle.BackColor;
+            grid.DefaultCellStyle.SelectionForeColor = grid.DefaultCellStyle.ForeColor;
+
+            // Handle cell formatting to ensure consistent appearance
+            grid.CellFormatting += Grid_CellFormatting;
+        }
+
+        private void Grid_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == grid.Columns["DeleteButton"].Index && e.RowIndex >= 0)
+            {
+                e.CellStyle.BackColor = grid.BackColor;
+                e.CellStyle.SelectionBackColor = grid.BackColor;
+            }
+        }
+
+        private void grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Check if the clicked cell is in the delete link column
+            if (e.ColumnIndex == grid.Columns["DeleteButton"].Index && e.RowIndex >= 0)
+            {
+                // Ask for confirmation before deleting
+                DialogResult result = MessageBox.Show(
+                    "Are you sure you want to delete this item?",
+                    "Confirm Delete",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    // Delete the row
+                    grid.Rows.RemoveAt(e.RowIndex);
+                }
             }
         }
 
@@ -75,5 +130,6 @@ namespace InventoryManagement
             DeleteButton.Enabled = true;
             grid.Enabled = true;
         }
+
     }
 }

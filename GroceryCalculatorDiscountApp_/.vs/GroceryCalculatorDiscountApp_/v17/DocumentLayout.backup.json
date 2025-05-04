@@ -15,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{02A210F6-8095-4A20-86BD-DB360B3AD652}|GroceryCalculatorDiscountApp\\GroceryCalculatorDiscountApp.csproj|solutionrelative:grocerycalculatordiscountapp\\pages\\shoppinglist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02A210F6-8095-4A20-86BD-DB360B3AD652}|GroceryCalculatorDiscountApp\\GroceryCalculatorDiscountApp.csproj|c:\\users\\admin\\desktop\\appsdev_\\grocerycalculatordiscountapp_\\grocerycalculatordiscountapp\\pages\\shoppinglist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{02A210F6-8095-4A20-86BD-DB360B3AD652}|GroceryCalculatorDiscountApp\\GroceryCalculatorDiscountApp.csproj|C:\\Users\\ADMIN\\Desktop\\AppsDev_\\GroceryCalculatorDiscountApp_\\grocerycalculatordiscountapp\\pages\\shoppinglist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{02A210F6-8095-4A20-86BD-DB360B3AD652}|GroceryCalculatorDiscountApp\\GroceryCalculatorDiscountApp.csproj|solutionrelative:grocerycalculatordiscountapp\\pages\\shoppinglist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -30,15 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -62,8 +58,7 @@
               "RelativeToolTip": "GroceryCalculatorDiscountApp\\Pages\\Receipt.cs",
               "ViewState": "AgIAAFEAAAAAAAAAAAAowGMAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T15:55:38.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-24T15:55:38.315Z"
             },
             {
               "$type": "Document",
@@ -88,8 +83,7 @@
               "RelativeToolTip": "GroceryCalculatorDiscountApp\\Pages\\CalculateMenu.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAADwvyAAAACdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T15:52:24.854Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-24T15:52:24.854Z"
             },
             {
               "$type": "Document",
@@ -100,8 +94,7 @@
               "ToolTip": "C:\\Users\\ADMIN\\Desktop\\AppsDev_\\GroceryCalculatorDiscountApp_\\GroceryCalculatorDiscountApp\\Pages\\ShoppingList.cs [Design]",
               "RelativeToolTip": "GroceryCalculatorDiscountApp\\Pages\\ShoppingList.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T15:51:55.119Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-24T15:51:55.119Z"
             }
           ]
         }
