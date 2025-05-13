@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ClientStore\\ClientStore",
+    "\\ClientStore\\ClientStore\\InventoryManagement",
+    "\\ClientStore\\ClientStore\\InventoryManagement\\ClientPage"
   ],
-  "SelectedNode": "\\GroceryCalculatorDiscountApp_.sln",
   "PreviewInSolutionExplorer": false
 }
