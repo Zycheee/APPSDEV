@@ -16,7 +16,9 @@ namespace InventoryManagement
         public HomePage()
         {
             InitializeComponent();
-
+            TutorialPage tutorialPage = new TutorialPage() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.panel2.Controls.Add(tutorialPage);
+            tutorialPage.Show();
 
         }
 
@@ -52,6 +54,10 @@ namespace InventoryManagement
         private void HomeButton_Click(object sender, EventArgs e)
         {
             this.panel2.Controls.Clear();
+            TutorialPage tutorialPage = new TutorialPage() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            this.panel2.Controls.Add(tutorialPage);
+            tutorialPage.Show();
+
             SideHomePage.Visible = true;
             SideInventoryPage.Visible = false;
             SideItemPage.Visible = false;
@@ -103,6 +109,21 @@ namespace InventoryManagement
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void settingsButton_Click(object sender, EventArgs e)
+        {
+            logoutPanel.Visible = !logoutPanel.Visible;
+        }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void cuiLabel3_Load(object sender, EventArgs e)
         {
 
         }

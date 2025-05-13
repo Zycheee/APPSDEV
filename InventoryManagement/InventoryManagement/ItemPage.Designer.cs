@@ -28,16 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemPage));
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             grid = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
             AddButton = new CuoreUI.Controls.cuiButton();
             addItem = new CuoreUI.Controls.cuiButton();
             panel1 = new CuoreUI.Controls.cuiPanel();
@@ -52,6 +50,11 @@
             cuiLabel4 = new CuoreUI.Controls.cuiLabel();
             cuiTextBox4 = new CuoreUI.Controls.cuiTextBox();
             DeleteButton = new CuoreUI.Controls.cuiButton();
+            cuiLabel8 = new CuoreUI.Controls.cuiLabel();
+            cuiColorPicker1 = new CuoreUI.Components.cuiColorPicker(components);
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)grid).BeginInit();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
@@ -91,7 +94,7 @@
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
             grid.DefaultCellStyle = dataGridViewCellStyle4;
             grid.EnableHeadersVisualStyles = false;
-            grid.Location = new Point(28, 43);
+            grid.Location = new Point(28, 116);
             grid.Name = "grid";
             dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = SystemColors.ActiveCaptionText;
@@ -104,27 +107,9 @@
             grid.RowHeadersVisible = false;
             grid.RowTemplate.Height = 50;
             grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            grid.Size = new Size(963, 488);
+            grid.Size = new Size(963, 416);
             grid.TabIndex = 2;
             grid.CellContentClick += grid_CellContentClick;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Id";
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Name";
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            Column3.DefaultCellStyle = dataGridViewCellStyle3;
-            Column3.HeaderText = "Price";
-            Column3.Name = "Column3";
             // 
             // AddButton
             // 
@@ -149,7 +134,7 @@
             AddButton.ImageAutoCenter = true;
             AddButton.ImageExpand = new Point(15, 15);
             AddButton.ImageOffset = new Point(-20, 0);
-            AddButton.Location = new Point(275, 557);
+            AddButton.Location = new Point(275, 558);
             AddButton.Name = "AddButton";
             AddButton.NormalBackground = Color.FromArgb(42, 106, 196);
             AddButton.NormalForeColor = Color.WhiteSmoke;
@@ -217,7 +202,7 @@
             panel1.Controls.Add(cuiLabel1);
             panel1.Controls.Add(cuiLabel2);
             panel1.Controls.Add(cuiTextBox2);
-            panel1.Location = new Point(263, 159);
+            panel1.Location = new Point(258, 198);
             panel1.Name = "panel1";
             panel1.OutlineThickness = 1F;
             panel1.PanelColor = Color.FromArgb(65, 66, 85);
@@ -300,28 +285,28 @@
             // 
             // cuiLabel1
             // 
-            cuiLabel1.Content = "Enter\\ the\\ product\\ name";
+            cuiLabel1.Content = "Enter\\ product\\ name";
             cuiLabel1.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiLabel1.ForeColor = Color.White;
             cuiLabel1.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel1.Location = new Point(34, 46);
+            cuiLabel1.Location = new Point(0, 46);
             cuiLabel1.Margin = new Padding(4, 3, 4, 3);
             cuiLabel1.Name = "cuiLabel1";
-            cuiLabel1.Size = new Size(218, 20);
+            cuiLabel1.Size = new Size(252, 20);
             cuiLabel1.TabIndex = 5;
             cuiLabel1.VerticalAlignment = StringAlignment.Near;
             cuiLabel1.Load += cuiLabel1_Load;
             // 
             // cuiLabel2
             // 
-            cuiLabel2.Content = "Enter\\ the\\ price";
+            cuiLabel2.Content = "Enter\\ price";
             cuiLabel2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiLabel2.ForeColor = Color.White;
             cuiLabel2.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel2.Location = new Point(34, 123);
+            cuiLabel2.Location = new Point(-7, 123);
             cuiLabel2.Margin = new Padding(4, 3, 4, 3);
             cuiLabel2.Name = "cuiLabel2";
-            cuiLabel2.Size = new Size(151, 20);
+            cuiLabel2.Size = new Size(192, 20);
             cuiLabel2.TabIndex = 3;
             cuiLabel2.VerticalAlignment = StringAlignment.Near;
             // 
@@ -363,7 +348,7 @@
             panel3.Controls.Add(cuiLabel3);
             panel3.Controls.Add(cuiLabel4);
             panel3.Controls.Add(cuiTextBox4);
-            panel3.Location = new Point(314, 192);
+            panel3.Location = new Point(309, 231);
             panel3.Name = "panel3";
             panel3.OutlineThickness = 1F;
             panel3.PanelColor = Color.FromArgb(65, 66, 85);
@@ -431,11 +416,11 @@
             // 
             // cuiLabel4
             // 
-            cuiLabel4.Content = "Enter\\ product\\ name";
+            cuiLabel4.Content = "Enter\\ product\\ ID";
             cuiLabel4.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiLabel4.ForeColor = Color.White;
             cuiLabel4.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel4.Location = new Point(8, 79);
+            cuiLabel4.Location = new Point(-4, 79);
             cuiLabel4.Margin = new Padding(4, 3, 4, 3);
             cuiLabel4.Name = "cuiLabel4";
             cuiLabel4.Size = new Size(193, 20);
@@ -495,7 +480,7 @@
             DeleteButton.ImageAutoCenter = true;
             DeleteButton.ImageExpand = new Point(7, 7);
             DeleteButton.ImageOffset = new Point(-20, 0);
-            DeleteButton.Location = new Point(561, 557);
+            DeleteButton.Location = new Point(561, 558);
             DeleteButton.Name = "DeleteButton";
             DeleteButton.NormalBackground = Color.FromArgb(37, 53, 76);
             DeleteButton.NormalForeColor = Color.WhiteSmoke;
@@ -513,12 +498,52 @@
             DeleteButton.TextOffset = new Point(0, 0);
             DeleteButton.Click += DeleteButton_Click;
             // 
+            // cuiLabel8
+            // 
+            cuiLabel8.AutoValidate = AutoValidate.EnablePreventFocusChange;
+            cuiLabel8.BackgroundImageLayout = ImageLayout.None;
+            cuiLabel8.Content = "Items";
+            cuiLabel8.Font = new Font("Arial", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiLabel8.ForeColor = Color.White;
+            cuiLabel8.HorizontalAlignment = StringAlignment.Center;
+            cuiLabel8.Location = new Point(329, 22);
+            cuiLabel8.Margin = new Padding(4, 3, 4, 3);
+            cuiLabel8.Name = "cuiLabel8";
+            cuiLabel8.Size = new Size(373, 60);
+            cuiLabel8.TabIndex = 18;
+            cuiLabel8.VerticalAlignment = StringAlignment.Center;
+            // 
+            // cuiColorPicker1
+            // 
+            cuiColorPicker1.Color = Color.Empty;
+            cuiColorPicker1.EnableThemeChangeButton = true;
+            cuiColorPicker1.Theme = CuoreUI.Components.Forms.ColorPickerForm.Themes.Light;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Id";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Item Name";
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            Column3.DefaultCellStyle = dataGridViewCellStyle3;
+            Column3.HeaderText = "Price";
+            Column3.Name = "Column3";
+            // 
             // ItemPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(111, 137, 217);
             ClientSize = new Size(1019, 679);
+            Controls.Add(cuiLabel8);
             Controls.Add(panel3);
             Controls.Add(panel1);
             Controls.Add(DeleteButton);
@@ -536,9 +561,6 @@
         #endregion
 
         private DataGridView grid;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
         private CuoreUI.Controls.cuiButton AddButton;
         private CuoreUI.Controls.cuiButton addItem;
         private CuoreUI.Controls.cuiPanel panel1;
@@ -553,5 +575,10 @@
         private CuoreUI.Controls.cuiTextBox cuiTextBox4;
         private CuoreUI.Controls.cuiButton deleteItem;
         private CuoreUI.Controls.cuiLabel cuiLabel3;
+        private CuoreUI.Controls.cuiLabel cuiLabel8;
+        private CuoreUI.Components.cuiColorPicker cuiColorPicker1;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
     }
 }

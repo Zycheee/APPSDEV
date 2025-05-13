@@ -39,6 +39,7 @@
             Column2 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
+            cuiLabel8 = new CuoreUI.Controls.cuiLabel();
             ((System.ComponentModel.ISupportInitialize)grid).BeginInit();
             SuspendLayout();
             // 
@@ -78,6 +79,7 @@
             grid.EnableHeadersVisualStyles = false;
             grid.Location = new Point(28, 95);
             grid.Name = "grid";
+            grid.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = SystemColors.ActiveCaptionText;
             dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
@@ -97,11 +99,13 @@
             // 
             Column1.HeaderText = "Id";
             Column1.Name = "Column1";
+            Column1.ReadOnly = true;
             // 
             // Column2
             // 
             Column2.HeaderText = "Name";
             Column2.Name = "Column2";
+            Column2.ReadOnly = true;
             // 
             // Column4
             // 
@@ -110,6 +114,7 @@
             Column4.DefaultCellStyle = dataGridViewCellStyle3;
             Column4.HeaderText = "Sales";
             Column4.Name = "Column4";
+            Column4.ReadOnly = true;
             // 
             // Column3
             // 
@@ -118,6 +123,22 @@
             Column3.DefaultCellStyle = dataGridViewCellStyle4;
             Column3.HeaderText = "Date";
             Column3.Name = "Column3";
+            Column3.ReadOnly = true;
+            // 
+            // cuiLabel8
+            // 
+            cuiLabel8.AutoValidate = AutoValidate.EnablePreventFocusChange;
+            cuiLabel8.BackgroundImageLayout = ImageLayout.None;
+            cuiLabel8.Content = "Sales";
+            cuiLabel8.Font = new Font("Arial", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cuiLabel8.ForeColor = Color.White;
+            cuiLabel8.HorizontalAlignment = StringAlignment.Center;
+            cuiLabel8.Location = new Point(329, 21);
+            cuiLabel8.Margin = new Padding(4, 3, 4, 3);
+            cuiLabel8.Name = "cuiLabel8";
+            cuiLabel8.Size = new Size(373, 60);
+            cuiLabel8.TabIndex = 18;
+            cuiLabel8.VerticalAlignment = StringAlignment.Center;
             // 
             // SalesPage
             // 
@@ -125,6 +146,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(111, 137, 217);
             ClientSize = new Size(1019, 679);
+            Controls.Add(cuiLabel8);
             Controls.Add(grid);
             FormBorderStyle = FormBorderStyle.None;
             Name = "SalesPage";
@@ -140,5 +162,6 @@
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column3;
+        private CuoreUI.Controls.cuiLabel cuiLabel8;
     }
 }

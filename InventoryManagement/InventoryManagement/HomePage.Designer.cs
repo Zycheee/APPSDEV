@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             HomeButton = new CuoreUI.Controls.cuiButton();
             panel1 = new Panel();
+            logoutPanel = new CuoreUI.Controls.cuiPanel();
+            logoutButton = new CuoreUI.Controls.cuiButton();
+            settingsButton = new CuoreUI.Controls.cuiButton();
             cuiLabel2 = new CuoreUI.Controls.cuiLabel();
             SideHomePage = new CuoreUI.Controls.cuiPanel();
             SideReportPage = new CuoreUI.Controls.cuiPanel();
@@ -44,6 +47,7 @@
             panel2 = new Panel();
             SideItemPage = new CuoreUI.Controls.cuiPanel();
             panel1.SuspendLayout();
+            logoutPanel.SuspendLayout();
             SuspendLayout();
             // 
             // HomeButton
@@ -89,6 +93,8 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(64, 79, 115);
+            panel1.Controls.Add(logoutPanel);
+            panel1.Controls.Add(settingsButton);
             panel1.Controls.Add(cuiLabel2);
             panel1.Controls.Add(SideHomePage);
             panel1.Controls.Add(SideReportPage);
@@ -106,6 +112,99 @@
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
+            // logoutPanel
+            // 
+            logoutPanel.Controls.Add(logoutButton);
+            logoutPanel.Location = new Point(118, 532);
+            logoutPanel.Name = "logoutPanel";
+            logoutPanel.OutlineThickness = 1F;
+            logoutPanel.PanelColor = Color.FromArgb(65, 66, 85);
+            logoutPanel.PanelOutlineColor = Color.FromArgb(65, 66, 85);
+            logoutPanel.Rounding = new Padding(8);
+            logoutPanel.Size = new Size(112, 77);
+            logoutPanel.TabIndex = 1;
+            logoutPanel.Visible = false;
+            // 
+            // logoutButton
+            // 
+            logoutButton.BackColor = Color.Transparent;
+            logoutButton.BackgroundImageLayout = ImageLayout.None;
+            logoutButton.CheckButton = false;
+            logoutButton.Checked = false;
+            logoutButton.CheckedBackground = Color.Transparent;
+            logoutButton.CheckedForeColor = Color.Transparent;
+            logoutButton.CheckedImageTint = Color.Transparent;
+            logoutButton.CheckedOutline = Color.Transparent;
+            logoutButton.Content = "Logout";
+            logoutButton.DialogResult = DialogResult.None;
+            logoutButton.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            logoutButton.ForeColor = Color.White;
+            logoutButton.HoverBackground = Color.FromArgb(96, 138, 227);
+            logoutButton.HoveredImageTint = Color.FromArgb(96, 138, 227);
+            logoutButton.HoverForeColor = Color.White;
+            logoutButton.HoverOutline = Color.Transparent;
+            logoutButton.Image = null;
+            logoutButton.ImageAutoCenter = true;
+            logoutButton.ImageExpand = new Point(7, 7);
+            logoutButton.ImageOffset = new Point(-20, 0);
+            logoutButton.Location = new Point(11, 20);
+            logoutButton.Name = "logoutButton";
+            logoutButton.NormalBackground = Color.Transparent;
+            logoutButton.NormalForeColor = Color.White;
+            logoutButton.NormalImageTint = Color.White;
+            logoutButton.NormalOutline = Color.Transparent;
+            logoutButton.OutlineThickness = 1F;
+            logoutButton.PressedBackground = Color.FromArgb(103, 152, 255);
+            logoutButton.PressedForeColor = Color.White;
+            logoutButton.PressedImageTint = Color.FromArgb(96, 138, 227);
+            logoutButton.PressedOutline = Color.Transparent;
+            logoutButton.Rounding = new Padding(5);
+            logoutButton.Size = new Size(93, 40);
+            logoutButton.TabIndex = 2;
+            logoutButton.TextAlignment = StringAlignment.Center;
+            logoutButton.TextOffset = new Point(0, 0);
+            logoutButton.Click += logoutButton_Click;
+            // 
+            // settingsButton
+            // 
+            settingsButton.BackColor = Color.Transparent;
+            settingsButton.BackgroundImageLayout = ImageLayout.None;
+            settingsButton.CheckButton = false;
+            settingsButton.Checked = false;
+            settingsButton.CheckedBackground = Color.Transparent;
+            settingsButton.CheckedForeColor = Color.Transparent;
+            settingsButton.CheckedImageTint = Color.Transparent;
+            settingsButton.CheckedOutline = Color.Transparent;
+            settingsButton.Content = "";
+            settingsButton.DialogResult = DialogResult.None;
+            settingsButton.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            settingsButton.ForeColor = Color.White;
+            settingsButton.HoverBackground = Color.FromArgb(96, 138, 227);
+            settingsButton.HoveredImageTint = Color.White;
+            settingsButton.HoverForeColor = Color.White;
+            settingsButton.HoverOutline = Color.Transparent;
+            settingsButton.Image = (Image)resources.GetObject("settingsButton.Image");
+            settingsButton.ImageAutoCenter = true;
+            settingsButton.ImageExpand = new Point(1, 1);
+            settingsButton.ImageOffset = new Point(0, 0);
+            settingsButton.Location = new Point(188, 615);
+            settingsButton.Name = "settingsButton";
+            settingsButton.NormalBackground = Color.Transparent;
+            settingsButton.NormalForeColor = Color.White;
+            settingsButton.NormalImageTint = Color.White;
+            settingsButton.NormalOutline = Color.Transparent;
+            settingsButton.OutlineThickness = 1F;
+            settingsButton.PressedBackground = Color.FromArgb(103, 152, 255);
+            settingsButton.PressedForeColor = Color.White;
+            settingsButton.PressedImageTint = Color.FromArgb(96, 138, 227);
+            settingsButton.PressedOutline = Color.Transparent;
+            settingsButton.Rounding = new Padding(15);
+            settingsButton.Size = new Size(42, 36);
+            settingsButton.TabIndex = 7;
+            settingsButton.TextAlignment = StringAlignment.Center;
+            settingsButton.TextOffset = new Point(0, 3);
+            settingsButton.Click += settingsButton_Click;
+            // 
             // cuiLabel2
             // 
             cuiLabel2.AutoValidate = AutoValidate.EnablePreventFocusChange;
@@ -115,10 +214,10 @@
             cuiLabel2.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cuiLabel2.ForeColor = Color.White;
             cuiLabel2.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel2.Location = new Point(23, 593);
+            cuiLabel2.Location = new Point(23, 598);
             cuiLabel2.Margin = new Padding(4, 3, 4, 3);
             cuiLabel2.Name = "cuiLabel2";
-            cuiLabel2.Size = new Size(219, 71);
+            cuiLabel2.Size = new Size(232, 71);
             cuiLabel2.TabIndex = 5;
             cuiLabel2.VerticalAlignment = StringAlignment.Center;
             // 
@@ -179,11 +278,11 @@
             cuiLabel1.AutoValidate = AutoValidate.EnablePreventFocusChange;
             cuiLabel1.BackgroundImage = Properties.Resources.icons8_grid_100;
             cuiLabel1.BackgroundImageLayout = ImageLayout.None;
-            cuiLabel1.Content = "InvMan";
+            cuiLabel1.Content = "Stockly";
             cuiLabel1.Font = new Font("Arial", 21.75F, FontStyle.Bold);
             cuiLabel1.ForeColor = Color.White;
             cuiLabel1.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel1.Location = new Point(0, 25);
+            cuiLabel1.Location = new Point(0, 12);
             cuiLabel1.Margin = new Padding(4, 3, 4, 3);
             cuiLabel1.Name = "cuiLabel1";
             cuiLabel1.Size = new Size(310, 98);
@@ -384,6 +483,7 @@
             Name = "HomePage";
             Text = "HomePage";
             panel1.ResumeLayout(false);
+            logoutPanel.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -402,5 +502,8 @@
         private CuoreUI.Controls.cuiPanel SideSalesPage;
         private CuoreUI.Controls.cuiPanel SideHomePage;
         private CuoreUI.Controls.cuiLabel cuiLabel2;
+        private CuoreUI.Controls.cuiButton settingsButton;
+        private CuoreUI.Controls.cuiPanel logoutPanel;
+        private CuoreUI.Controls.cuiButton logoutButton;
     }
 }
